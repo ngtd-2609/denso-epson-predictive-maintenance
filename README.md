@@ -1,4 +1,4 @@
-# DENSO — Epson: bàn giao dữ liệu Người 1
+# DENSO — Epson: bàn giao dữ liệu Người 1: Tung Duong
 
 Copyright © 2026 Nguyen Tung Duong. **All rights reserved.** Xem [thông báo bản quyền](LICENSE). Repo không cấp giấy phép mã nguồn mở; thông báo này không cấp quyền sử dụng lại. Dữ liệu Epson và tài liệu bên thứ ba vẫn theo quyền và điều kiện của chủ sở hữu tương ứng.
 
