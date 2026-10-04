@@ -1,0 +1,244 @@
+{
+  "stage": 5,
+  "package": "loader_v1",
+  "status": "PASS",
+  "prepared_source": "results/prepared_v1",
+  "window_layout": "[N, 3, 3000]",
+  "profiles": [
+    "normal_only",
+    "k1",
+    "k2",
+    "k4"
+  ],
+  "splits": [
+    "train",
+    "validation",
+    "test"
+  ],
+  "results": {
+    "normal_only": {
+      "train": {
+        "X_shape": [
+          752,
+          3,
+          3000
+        ],
+        "X_dtype": "float32",
+        "unique_recordings": 8,
+        "classes": [
+          0
+        ],
+        "passed": true
+      },
+      "validation": {
+        "X_shape": [
+          2256,
+          3,
+          3000
+        ],
+        "X_dtype": "float32",
+        "unique_recordings": 24,
+        "classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "passed": true
+      },
+      "test": {
+        "X_shape": [
+          2256,
+          3,
+          3000
+        ],
+        "X_dtype": "float32",
+        "unique_recordings": 24,
+        "classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "passed": true
+      }
+    },
+    "k1": {
+      "train": {
+        "X_shape": [
+          1222,
+          3,
+          3000
+        ],
+        "X_dtype": "float32",
+        "unique_recordings": 13,
+        "classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "passed": true
+      },
+      "validation": {
+        "X_shape": [
+          2256,
+          3,
+          3000
+        ],
+        "X_dtype": "float32",
+        "unique_recordings": 24,
+        "classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "passed": true
+      },
+      "test": {
+        "X_shape": [
+          2256,
+          3,
+          3000
+        ],
+        "X_dtype": "float32",
+        "unique_recordings": 24,
+        "classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "passed": true
+      }
+    },
+    "k2": {
+      "train": {
+        "X_shape": [
+          1692,
+          3,
+          3000
+        ],
+        "X_dtype": "float32",
+        "unique_recordings": 18,
+        "classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "passed": true
+      },
+      "validation": {
+        "X_shape": [
+          2256,
+          3,
+          3000
+        ],
+        "X_dtype": "float32",
+        "unique_recordings": 24,
+        "classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "passed": true
+      },
+      "test": {
+        "X_shape": [
+          2256,
+          3,
+          3000
+        ],
+        "X_dtype": "float32",
+        "unique_recordings": 24,
+        "classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "passed": true
+      }
+    },
+    "k4": {
+      "train": {
+        "X_shape": [
+          2632,
+          3,
+          3000
+        ],
+        "X_dtype": "float32",
+        "unique_recordings": 28,
+        "classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "passed": true
+      },
+      "validation": {
+        "X_shape": [
+          2256,
+          3,
+          3000
+        ],
+        "X_dtype": "float32",
+        "unique_recordings": 24,
+        "classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "passed": true
+      },
+      "test": {
+        "X_shape": [
+          2256,
+          3,
+          3000
+        ],
+        "X_dtype": "float32",
+        "unique_recordings": 24,
+        "classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "passed": true
+      }
+    }
+  },
+  "alias_check": "PASS",
+  "pytorch_adapter": "PASS",
+  "loader_sha256": "4c32323806525c1fab4e5596380d3c56cc2c582c9582da11b64e0f2d12dfa8f7",
+  "init_sha256": "c6e25f8ab752b928fc862677453936d7f6029aff16be3b184f5695ffbe4a9152",
+  "important_rule": "Loader reads frozen prepared_v1 only; it does not refit scaler or re-window raw data."
+}

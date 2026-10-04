@@ -1,0 +1,16 @@
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/person1_data/
+!/docs/
+!/release_manifest.json
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+*.npz
+*.zip
+*.part
+.env
+.env.*

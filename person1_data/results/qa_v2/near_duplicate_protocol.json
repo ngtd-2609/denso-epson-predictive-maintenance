@@ -1,0 +1,102 @@
+﻿{
+  "protocol_version": "near_duplicate_v1",
+  "dataset_scope": "all 96 Epson trimmed recordings",
+  "purpose": "data-integrity screening only; not class-feature tuning",
+  "rules_fixed_before_real_scan": true,
+
+  "important_interpretation": [
+    "High correlation alone does not prove two recordings share the same source.",
+    "Low correlation does not prove session independence.",
+    "The analysis cannot recover missing session metadata with certainty.",
+    "No record is automatically deleted or moved between splits.",
+    "Any confirmed overlap across splits requires stopping official evaluation and redesigning the split."
+  ],
+
+  "stage_1_existing_exact_checks": {
+    "reuse_existing_audit": true,
+    "byte_duplicate_check": true,
+    "numeric_signal_duplicate_check": true,
+    "rerun_only_if_source_or_audit_code_changes": true
+  },
+
+  "stage_2_candidate_screen": {
+    "segment_count_per_record": 5,
+    "segment_selection": "fixed equally spaced segments",
+    "segment_length_samples": 6000,
+    "segment_duration_seconds_at_3000hz": 2.0,
+
+    "features_per_segment": [
+      "per-channel mean",
+      "per-channel std",
+      "per-channel RMS",
+      "per-channel peak-to-peak",
+      "per-channel PSD band summaries",
+      "dominant-frequency summary",
+      "cross-channel zero-lag correlations"
+    ],
+
+    "amplitude_information_retained": true,
+
+    "candidate_policy": [
+      "compare recordings without using model performance",
+      "retain top nearest candidates per recording",
+      "prioritize cross-split pairs for manual verification",
+      "do not treat PSD similarity or feature proximity as proof of copying"
+    ]
+  },
+
+  "stage_3_verification": {
+    "verification_segment_length_samples": 30000,
+    "verification_duration_seconds_at_3000hz": 10.0,
+    "common_lag_only_for_all_three_channels": true,
+    "maximum_common_lag_samples": 6000,
+    "maximum_common_lag_seconds": 2.0,
+
+    "metrics": [
+      "per-channel Pearson correlation after one common lag",
+      "joint normalized RMSE",
+      "joint normalized MAE",
+      "matched-length samples",
+      "amplitude-ratio consistency",
+      "residual structure"
+    ],
+
+    "forbidden": [
+      "independent lag per channel",
+      "verification using only one attractive cycle",
+      "automatic deletion from correlation threshold",
+      "automatic split modification"
+    ]
+  },
+
+  "synthetic_fixture_requirements": {
+    "must_run_before_real_scan": true,
+    "positive_controls": [
+      "exact copy",
+      "copy shifted by one common lag across X/Y/Z",
+      "shifted copy plus small additive noise",
+      "scaled shifted copy plus small noise"
+    ],
+    "negative_controls": [
+      "two independent three-channel signals with the same fundamental frequency",
+      "same-frequency signals with different phases and amplitudes"
+    ],
+    "goal": "demonstrate that the verification logic recognizes known shifted copies without labeling every same-frequency signal as a duplicate"
+  },
+
+  "output_files": {
+    "protocol": "qa_v2/near_duplicate_protocol.json",
+    "candidates": "qa_v2/near_duplicate_candidates.csv",
+    "review": "qa_v2/near_duplicate_review.txt"
+  },
+
+  "decision_states": [
+    "SCREEN_CANDIDATE",
+    "NOT_CONFIRMED",
+    "CONFIRMED_OVERLAP",
+    "OPEN_LIMITATION"
+  ],
+
+  "session_metadata_status": "unknown",
+  "final_claim_boundary": "Passing this protocol does not prove absence of every possible leakage or session relationship."
+}

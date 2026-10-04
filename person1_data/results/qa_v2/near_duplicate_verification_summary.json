@@ -1,0 +1,25 @@
+{
+  "status": "MEASUREMENT_COMPLETE_REVIEW_REQUIRED",
+  "candidate_count": 363,
+  "cross_split_candidate_count": 239,
+  "segment_selection": "fixed middle 30000 samples",
+  "segment_length_samples": 30000,
+  "segment_duration_seconds": 10.0,
+  "maximum_common_lag_samples": 6000,
+  "maximum_common_lag_seconds": 2.0,
+  "common_lag_for_all_channels": true,
+  "independent_channel_lag": false,
+  "automatic_duplicate_threshold": null,
+  "automatic_delete": false,
+  "automatic_split_change": false,
+  "ranking_note": "Sorted by mean three-channel correlation descending, then standardized RMSE ascending. Ranking is only for review.",
+  "top_pair": "trimMA342_1200rpm_A__DW_11 <-> trimMA342_1200rpm_A__DW_15",
+  "top_pair_mean_corr": 0.9445703015657725,
+  "top_pair_standardized_rmse": 0.33295554788658277,
+  "important_limitations": [
+    "Verification uses one fixed middle 10-second segment per recording.",
+    "Passing does not establish session independence.",
+    "Periodic signals may correlate strongly without sharing recording provenance.",
+    "No pair is classified as duplicate solely from correlation."
+  ]
+}

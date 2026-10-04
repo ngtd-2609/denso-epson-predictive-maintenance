@@ -1,0 +1,30 @@
+EPSON PERSON 1 RELEASE
+======================
+
+Release:
+EPSON_PERSON1_HANDOFF_V1
+
+Created:
+2026-10-04T06:52:09.644359+07:00
+
+Dataset:
+Epson trimmed
+
+Protocol:
+data_contract_v1 / FROZEN
+
+Prepared data:
+prepared_v1 / complete
+
+Loader:
+loader_v1 / PASS
+
+Git available:
+False
+
+Version authority:
+Frozen protocol + SHA256 artifact manifest.
+
+Important:
+Do not silently replace split, prepared data, scaler,
+scarcity membership or protocol artifacts under this release.

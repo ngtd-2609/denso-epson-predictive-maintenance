@@ -1,0 +1,55 @@
+EPSON PERSON 1 - REPRODUCIBILITY ENVIRONMENT
+================================================
+
+Release:
+EPSON_PERSON1_HANDOFF_V1
+
+Captured:
+2026-10-04T06:52:09.644359+07:00
+
+Python executable:
+C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\python.exe
+
+Python:
+3.13.5
+
+Platform:
+Windows-11-10.0.26200-SP0
+
+numpy:
+2.3.5
+
+pandas:
+2.3.3
+
+scipy:
+1.17.1
+
+matplotlib:
+3.10.9
+
+torch:
+2.12.1+cpu
+
+Git available:
+False
+
+Git repository:
+None
+
+Git branch:
+None
+
+Git commit:
+None
+
+Git working tree clean:
+None
+
+Git note:
+person1_data is not inside a Git repository at release time.
+
+Reproducibility rule:
+Use the frozen prepared_v1 artifacts and loader_v1.
+Do not refit the scaler or regenerate scarcity membership
+unless explicitly creating a new protocol version.

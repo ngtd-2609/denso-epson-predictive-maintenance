@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+downloads/
+data/
+results/*
+!results/audit_v1/
+!results/split_seed42/
+!results/prepared_v1/
+!results/qa_v2/
+results/prepared_v1/**/*.npz
+results/qa_v2/figures/
+results/qa_v2/figures_train_k1/
+results/qa_v2/*.png

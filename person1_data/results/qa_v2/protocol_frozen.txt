@@ -1,0 +1,88 @@
+EPSON DATA PROTOCOL - FROZEN V1
+========================================================================
+
+Frozen at:
+2026-10-04T06:41:45.145009+07:00
+
+STATUS: FROZEN
+
+1. DATASET
+- Epson trimmed dataset.
+- 96 recordings.
+- Six classes, 16 recordings per class.
+- Fs = 3000 Hz.
+- Channels = X, Y, Z.
+- Raw quantity = vibration velocity in mm/s.
+- Nominal speed = 1200 rpm.
+- Session independence remains unverified.
+
+2. SPLIT
+- Split unit = recording/file.
+- Seed = 42.
+- Train = 48 records = 8/class.
+- Validation = 24 records = 4/class.
+- Test = 24 records = 4/class.
+- Recording IDs are disjoint.
+
+3. WINDOWING
+- Window = 3000 samples = 1.0 s.
+- Stride = 3000 samples = 1.0 s.
+- Recording split occurs before windowing.
+
+4. SCARCITY
+- Selection seed = 101.
+- Fixed normal pool = 8 train records.
+- k1 = 8 normal + 5 fault = 13.
+- k2 = 8 normal + 10 fault = 18.
+- k4 = 8 normal + 20 fault = 28.
+- k1 is a strict subset of k2.
+- k2 is a strict subset of k4.
+- 20 remaining train fault records are excluded from scarcity runs.
+
+5. NORMALIZATION
+- Per-channel z-score.
+- ddof = 0.
+- Separate scaler for normal-only, k1, k2 and k4.
+- Scaler is fit only on permitted train records.
+- All samples in permitted records contribute, including unused tail.
+- Validation/test never fit the scaler.
+
+6. VALIDATION
+- May be used for model selection, early stopping,
+  threshold selection and hyperparameter selection.
+- Must not fit scaler, generator weights or detector weights.
+- Must not be reported as final held-out performance.
+
+7. TEST
+- Used for final held-out evaluation only after protocol freeze.
+- Exception: frozen pre-model data-integrity auditing is allowed.
+- Test must not guide preprocessing/model/threshold/hyperparameter choices.
+
+8. INTEGRITY
+- Stage 2 signal QA completed.
+- Stage 3 near/shifted duplicate review:
+  PASS WITH OPEN-LIMITATION.
+- Confirmed recording overlap pairs = 0.
+- No record deletion.
+- No split redesign required.
+
+9. LIMITATIONS
+- Session independence unverified.
+- Single rig / nominal speed.
+- Near-duplicate analysis cannot prove complete source independence.
+- Per-sample timestamps unavailable.
+
+10. CHANGE CONTROL
+- No silent change to split, scarcity membership, windowing,
+  normalization, preprocessing or access policy.
+- Any such change requires a new protocol/prepared-data version.
+
+11. SHA256
+- public_manifest.csv: 31bc7b64c98263e03a3fef92bd3b1eada16a58d663c4afda64ebe5e7577d5c54
+- split.csv: 1295fa4c96f16c2d4719325c8a6f0a06264f1e4124d83afdb6b5874586727ac8
+- preparation_report.json: 28210c0577a60ea50d8bf42cd11125f4d5a1a806b00546bcee3085af3dc2b8e3
+- near_duplicate_stage3_final.json: 4f3ff05afa560b731c26865a8bc9def145656dbfcf17865d62e6b88017166485
+- data_contract.json: 6645d70e6f4b3cddc76abffd700eba545478ed5ee81fa62342e4e7e46eebdc83
+- access_and_scarcity.csv: 256c18b199f14e35418e962c7322a32f42947677ae2cdf792ef1aa007dee312d
+
+END OF FROZEN PROTOCOL

@@ -1,0 +1,446 @@
+{
+  "contract_version": "data_contract_v1",
+  "status": "FROZEN",
+  "created_at_local": "2026-10-04T06:41:45.145009+07:00",
+  "dataset": {
+    "name": "Epson trimmed",
+    "record_count": 96,
+    "split_unit": "recording/file",
+    "session_independence_verified": false,
+    "single_rig": true,
+    "nominal_rpm": 1200
+  },
+  "signal": {
+    "sampling_rate_hz": 3000,
+    "channels": [
+      "X",
+      "Y",
+      "Z"
+    ],
+    "raw_unit": "mm/s",
+    "prepared_unit": "dimensionless z-score",
+    "window_length_samples": 3000,
+    "window_duration_seconds": 1.0,
+    "stride_samples": 3000,
+    "stride_seconds": 1.0
+  },
+  "class_mapping": {
+    "0": {
+      "config_label": "A__D",
+      "binary_label": 0,
+      "record_count": 16
+    },
+    "1": {
+      "config_label": "AW__D",
+      "binary_label": 1,
+      "record_count": 16
+    },
+    "2": {
+      "config_label": "A__DW",
+      "binary_label": 1,
+      "record_count": 16
+    },
+    "3": {
+      "config_label": "Avv__D",
+      "binary_label": 1,
+      "record_count": 16
+    },
+    "4": {
+      "config_label": "A__Dvv",
+      "binary_label": 1,
+      "record_count": 16
+    },
+    "5": {
+      "config_label": "Avv__Dvv",
+      "binary_label": 1,
+      "record_count": 16
+    }
+  },
+  "split": {
+    "seed": 42,
+    "train_records": 48,
+    "validation_records": 24,
+    "test_records": 24,
+    "records_per_class": {
+      "train": 8,
+      "validation": 4,
+      "test": 4
+    },
+    "recording_id_overlap": false
+  },
+  "scarcity": {
+    "selection_seed": 101,
+    "nested": true,
+    "fixed_normal_train_records": 8,
+    "budgets": {
+      "k1": {
+        "fault_records_per_fault_class": 1,
+        "normal_train_records": 8,
+        "fault_train_records": 5,
+        "total_train_records": 13,
+        "train_window_count": 1222,
+        "validation_window_count": 2256,
+        "test_window_count": 2256,
+        "train_recording_ids": [
+          "trimMA342_1200rpm_AW__D_14",
+          "trimMA342_1200rpm_A__DW_00",
+          "trimMA342_1200rpm_A__D_00",
+          "trimMA342_1200rpm_A__D_03",
+          "trimMA342_1200rpm_A__D_06",
+          "trimMA342_1200rpm_A__D_07",
+          "trimMA342_1200rpm_A__D_09",
+          "trimMA342_1200rpm_A__D_10",
+          "trimMA342_1200rpm_A__D_11",
+          "trimMA342_1200rpm_A__D_15",
+          "trimMA342_1200rpm_A__Dvv_05",
+          "trimMA342_1200rpm_Avv__D_05",
+          "trimMA342_1200rpm_Avv__Dvv_04"
+        ],
+        "fault_train_recording_ids": [
+          "trimMA342_1200rpm_AW__D_14",
+          "trimMA342_1200rpm_A__DW_00",
+          "trimMA342_1200rpm_A__Dvv_05",
+          "trimMA342_1200rpm_Avv__D_05",
+          "trimMA342_1200rpm_Avv__Dvv_04"
+        ],
+        "scaler": {
+          "fit_recording_ids": [
+            "trimMA342_1200rpm_AW__D_14",
+            "trimMA342_1200rpm_A__DW_00",
+            "trimMA342_1200rpm_A__D_00",
+            "trimMA342_1200rpm_A__D_03",
+            "trimMA342_1200rpm_A__D_06",
+            "trimMA342_1200rpm_A__D_07",
+            "trimMA342_1200rpm_A__D_09",
+            "trimMA342_1200rpm_A__D_10",
+            "trimMA342_1200rpm_A__D_11",
+            "trimMA342_1200rpm_A__D_15",
+            "trimMA342_1200rpm_A__Dvv_05",
+            "trimMA342_1200rpm_Avv__D_05",
+            "trimMA342_1200rpm_Avv__Dvv_04"
+          ],
+          "mean": [
+            1.5738590125432678e-09,
+            1.0776081529205178e-08,
+            -1.962844935003178e-08
+          ],
+          "std": [
+            0.0009124581214454457,
+            0.0008686396593289901,
+            0.0009739928853965645
+          ],
+          "ddof": 0,
+          "weighting": "all samples in selected train records, including unused tail"
+        }
+      },
+      "k2": {
+        "fault_records_per_fault_class": 2,
+        "normal_train_records": 8,
+        "fault_train_records": 10,
+        "total_train_records": 18,
+        "train_window_count": 1692,
+        "validation_window_count": 2256,
+        "test_window_count": 2256,
+        "train_recording_ids": [
+          "trimMA342_1200rpm_AW__D_03",
+          "trimMA342_1200rpm_AW__D_14",
+          "trimMA342_1200rpm_A__DW_00",
+          "trimMA342_1200rpm_A__DW_11",
+          "trimMA342_1200rpm_A__D_00",
+          "trimMA342_1200rpm_A__D_03",
+          "trimMA342_1200rpm_A__D_06",
+          "trimMA342_1200rpm_A__D_07",
+          "trimMA342_1200rpm_A__D_09",
+          "trimMA342_1200rpm_A__D_10",
+          "trimMA342_1200rpm_A__D_11",
+          "trimMA342_1200rpm_A__D_15",
+          "trimMA342_1200rpm_A__Dvv_04",
+          "trimMA342_1200rpm_A__Dvv_05",
+          "trimMA342_1200rpm_Avv__D_05",
+          "trimMA342_1200rpm_Avv__D_11",
+          "trimMA342_1200rpm_Avv__Dvv_04",
+          "trimMA342_1200rpm_Avv__Dvv_05"
+        ],
+        "fault_train_recording_ids": [
+          "trimMA342_1200rpm_AW__D_03",
+          "trimMA342_1200rpm_AW__D_14",
+          "trimMA342_1200rpm_A__DW_00",
+          "trimMA342_1200rpm_A__DW_11",
+          "trimMA342_1200rpm_A__Dvv_04",
+          "trimMA342_1200rpm_A__Dvv_05",
+          "trimMA342_1200rpm_Avv__D_05",
+          "trimMA342_1200rpm_Avv__D_11",
+          "trimMA342_1200rpm_Avv__Dvv_04",
+          "trimMA342_1200rpm_Avv__Dvv_05"
+        ],
+        "scaler": {
+          "fit_recording_ids": [
+            "trimMA342_1200rpm_AW__D_03",
+            "trimMA342_1200rpm_AW__D_14",
+            "trimMA342_1200rpm_A__DW_00",
+            "trimMA342_1200rpm_A__DW_11",
+            "trimMA342_1200rpm_A__D_00",
+            "trimMA342_1200rpm_A__D_03",
+            "trimMA342_1200rpm_A__D_06",
+            "trimMA342_1200rpm_A__D_07",
+            "trimMA342_1200rpm_A__D_09",
+            "trimMA342_1200rpm_A__D_10",
+            "trimMA342_1200rpm_A__D_11",
+            "trimMA342_1200rpm_A__D_15",
+            "trimMA342_1200rpm_A__Dvv_04",
+            "trimMA342_1200rpm_A__Dvv_05",
+            "trimMA342_1200rpm_Avv__D_05",
+            "trimMA342_1200rpm_Avv__D_11",
+            "trimMA342_1200rpm_Avv__Dvv_04",
+            "trimMA342_1200rpm_Avv__Dvv_05"
+          ],
+          "mean": [
+            -1.904239987825114e-09,
+            1.2941939074437943e-08,
+            -1.5701351720502317e-08
+          ],
+          "std": [
+            0.0009189651369702678,
+            0.0008704267304740039,
+            0.0009803281294706726
+          ],
+          "ddof": 0,
+          "weighting": "all samples in selected train records, including unused tail"
+        }
+      },
+      "k4": {
+        "fault_records_per_fault_class": 4,
+        "normal_train_records": 8,
+        "fault_train_records": 20,
+        "total_train_records": 28,
+        "train_window_count": 2632,
+        "validation_window_count": 2256,
+        "test_window_count": 2256,
+        "train_recording_ids": [
+          "trimMA342_1200rpm_AW__D_03",
+          "trimMA342_1200rpm_AW__D_04",
+          "trimMA342_1200rpm_AW__D_07",
+          "trimMA342_1200rpm_AW__D_14",
+          "trimMA342_1200rpm_A__DW_00",
+          "trimMA342_1200rpm_A__DW_05",
+          "trimMA342_1200rpm_A__DW_09",
+          "trimMA342_1200rpm_A__DW_11",
+          "trimMA342_1200rpm_A__D_00",
+          "trimMA342_1200rpm_A__D_03",
+          "trimMA342_1200rpm_A__D_06",
+          "trimMA342_1200rpm_A__D_07",
+          "trimMA342_1200rpm_A__D_09",
+          "trimMA342_1200rpm_A__D_10",
+          "trimMA342_1200rpm_A__D_11",
+          "trimMA342_1200rpm_A__D_15",
+          "trimMA342_1200rpm_A__Dvv_04",
+          "trimMA342_1200rpm_A__Dvv_05",
+          "trimMA342_1200rpm_A__Dvv_09",
+          "trimMA342_1200rpm_A__Dvv_15",
+          "trimMA342_1200rpm_Avv__D_03",
+          "trimMA342_1200rpm_Avv__D_05",
+          "trimMA342_1200rpm_Avv__D_10",
+          "trimMA342_1200rpm_Avv__D_11",
+          "trimMA342_1200rpm_Avv__Dvv_04",
+          "trimMA342_1200rpm_Avv__Dvv_05",
+          "trimMA342_1200rpm_Avv__Dvv_12",
+          "trimMA342_1200rpm_Avv__Dvv_15"
+        ],
+        "fault_train_recording_ids": [
+          "trimMA342_1200rpm_AW__D_03",
+          "trimMA342_1200rpm_AW__D_04",
+          "trimMA342_1200rpm_AW__D_07",
+          "trimMA342_1200rpm_AW__D_14",
+          "trimMA342_1200rpm_A__DW_00",
+          "trimMA342_1200rpm_A__DW_05",
+          "trimMA342_1200rpm_A__DW_09",
+          "trimMA342_1200rpm_A__DW_11",
+          "trimMA342_1200rpm_A__Dvv_04",
+          "trimMA342_1200rpm_A__Dvv_05",
+          "trimMA342_1200rpm_A__Dvv_09",
+          "trimMA342_1200rpm_A__Dvv_15",
+          "trimMA342_1200rpm_Avv__D_03",
+          "trimMA342_1200rpm_Avv__D_05",
+          "trimMA342_1200rpm_Avv__D_10",
+          "trimMA342_1200rpm_Avv__D_11",
+          "trimMA342_1200rpm_Avv__Dvv_04",
+          "trimMA342_1200rpm_Avv__Dvv_05",
+          "trimMA342_1200rpm_Avv__Dvv_12",
+          "trimMA342_1200rpm_Avv__Dvv_15"
+        ],
+        "scaler": {
+          "fit_recording_ids": [
+            "trimMA342_1200rpm_AW__D_03",
+            "trimMA342_1200rpm_AW__D_04",
+            "trimMA342_1200rpm_AW__D_07",
+            "trimMA342_1200rpm_AW__D_14",
+            "trimMA342_1200rpm_A__DW_00",
+            "trimMA342_1200rpm_A__DW_05",
+            "trimMA342_1200rpm_A__DW_09",
+            "trimMA342_1200rpm_A__DW_11",
+            "trimMA342_1200rpm_A__D_00",
+            "trimMA342_1200rpm_A__D_03",
+            "trimMA342_1200rpm_A__D_06",
+            "trimMA342_1200rpm_A__D_07",
+            "trimMA342_1200rpm_A__D_09",
+            "trimMA342_1200rpm_A__D_10",
+            "trimMA342_1200rpm_A__D_11",
+            "trimMA342_1200rpm_A__D_15",
+            "trimMA342_1200rpm_A__Dvv_04",
+            "trimMA342_1200rpm_A__Dvv_05",
+            "trimMA342_1200rpm_A__Dvv_09",
+            "trimMA342_1200rpm_A__Dvv_15",
+            "trimMA342_1200rpm_Avv__D_03",
+            "trimMA342_1200rpm_Avv__D_05",
+            "trimMA342_1200rpm_Avv__D_10",
+            "trimMA342_1200rpm_Avv__D_11",
+            "trimMA342_1200rpm_Avv__Dvv_04",
+            "trimMA342_1200rpm_Avv__Dvv_05",
+            "trimMA342_1200rpm_Avv__Dvv_12",
+            "trimMA342_1200rpm_Avv__Dvv_15"
+          ],
+          "mean": [
+            -2.1366185664433393e-09,
+            7.223633276146489e-09,
+            -4.063886853294348e-09
+          ],
+          "std": [
+            0.0009258399898000209,
+            0.000873400726622438,
+            0.0009858191985464546
+          ],
+          "ddof": 0,
+          "weighting": "all samples in selected train records, including unused tail"
+        }
+      }
+    },
+    "unused_train_fault_records_under_k4": 20,
+    "unused_train_recording_ids_under_k4": [
+      "trimMA342_1200rpm_AW__D_00",
+      "trimMA342_1200rpm_AW__D_02",
+      "trimMA342_1200rpm_AW__D_08",
+      "trimMA342_1200rpm_AW__D_12",
+      "trimMA342_1200rpm_A__DW_08",
+      "trimMA342_1200rpm_A__DW_12",
+      "trimMA342_1200rpm_A__DW_13",
+      "trimMA342_1200rpm_A__DW_14",
+      "trimMA342_1200rpm_A__Dvv_01",
+      "trimMA342_1200rpm_A__Dvv_07",
+      "trimMA342_1200rpm_A__Dvv_12",
+      "trimMA342_1200rpm_A__Dvv_13",
+      "trimMA342_1200rpm_Avv__D_02",
+      "trimMA342_1200rpm_Avv__D_07",
+      "trimMA342_1200rpm_Avv__D_08",
+      "trimMA342_1200rpm_Avv__D_15",
+      "trimMA342_1200rpm_Avv__Dvv_01",
+      "trimMA342_1200rpm_Avv__Dvv_02",
+      "trimMA342_1200rpm_Avv__Dvv_03",
+      "trimMA342_1200rpm_Avv__Dvv_13"
+    ]
+  },
+  "normal_only": {
+    "train_record_count": 8,
+    "train_recording_ids": [
+      "trimMA342_1200rpm_A__D_00",
+      "trimMA342_1200rpm_A__D_03",
+      "trimMA342_1200rpm_A__D_06",
+      "trimMA342_1200rpm_A__D_07",
+      "trimMA342_1200rpm_A__D_09",
+      "trimMA342_1200rpm_A__D_10",
+      "trimMA342_1200rpm_A__D_11",
+      "trimMA342_1200rpm_A__D_15"
+    ],
+    "train_windows": 752,
+    "validation_windows": 2256,
+    "test_windows": 2256,
+    "scaler": {
+      "mean": [
+        -7.715004296960635e-09,
+        1.3323945262529438e-08,
+        -1.410644864700162e-08
+      ],
+      "std": [
+        0.0008981359353872325,
+        0.0008624705592020212,
+        0.0009589266454090516
+      ],
+      "scale": [
+        0.0008981359353872325,
+        0.0008624705592020212,
+        0.0009589266454090516
+      ],
+      "n_samples": 2275096,
+      "fit_recording_ids": [
+        "trimMA342_1200rpm_A__D_00",
+        "trimMA342_1200rpm_A__D_03",
+        "trimMA342_1200rpm_A__D_06",
+        "trimMA342_1200rpm_A__D_07",
+        "trimMA342_1200rpm_A__D_09",
+        "trimMA342_1200rpm_A__D_10",
+        "trimMA342_1200rpm_A__D_11",
+        "trimMA342_1200rpm_A__D_15"
+      ],
+      "weighting": "all samples in selected train records, including unused tail",
+      "ddof": 0
+    }
+  },
+  "normalization": {
+    "method": "per-channel z-score",
+    "ddof": 0,
+    "budget_specific_scaler": true,
+    "fit_scope": "all samples in allowed training records, including unused tail",
+    "validation_used_for_scaler_fit": false,
+    "test_used_for_scaler_fit": false
+  },
+  "validation_policy": {
+    "record_count": 24,
+    "normal_records": 4,
+    "fault_records": 20,
+    "allowed": [
+      "model selection",
+      "early stopping",
+      "threshold selection",
+      "hyperparameter selection"
+    ],
+    "forbidden": [
+      "scaler fitting",
+      "generator weight fitting",
+      "detector weight fitting",
+      "final held-out performance claim"
+    ]
+  },
+  "test_policy": {
+    "record_count": 24,
+    "normal_records": 4,
+    "fault_records": 20,
+    "allowed": [
+      "final held-out evaluation after protocol freeze",
+      "pre-model frozen data-integrity audit only"
+    ],
+    "forbidden": [
+      "scaler fitting",
+      "generator fitting",
+      "detector fitting",
+      "threshold selection",
+      "hyperparameter selection",
+      "preprocessing selection",
+      "model-selection decisions"
+    ]
+  },
+  "integrity_gate": {
+    "stage3_status": "PASS_WITH_OPEN_LIMITATION",
+    "confirmed_overlap_pairs": 0,
+    "split_action": "NONE",
+    "record_deletion": "NONE"
+  },
+  "limitations": [
+    "Recording-session independence is unverified.",
+    "Dataset represents one rig at one nominal speed.",
+    "Near-duplicate review cannot prove complete source independence.",
+    "Per-sample timestamps are unavailable."
+  ],
+  "change_control": {
+    "silent_changes_allowed": false,
+    "rule": "Any change to split, scarcity membership, windowing, normalization, access policy or preprocessing requires a new version."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "stage": 6,
+  "name": "reproducibility_version_package",
+  "release": "EPSON_PERSON1_HANDOFF_V1",
+  "status": "PASS_WITH_OPEN_LIMITATION",
+  "git_available": false,
+  "package_file_count": 95,
+  "package_total_bytes": 908765545,
+  "artifacts": {
+    "VERSION.txt": "94615cbe785afc1df2bcec114c569c68c85bde65fd69c7cc21f216d8ef19c4ce",
+    "environment_reproducibility.txt": "d3aafe2a266814cc5fc91d09842f717db380cf7532ea59391fbeeb1f8fab1b93",
+    "pip_freeze.txt": "8e59efbe4c6d418419a071c955f8c2de36c78b3fa49a73a4c3588b1aae932556",
+    "package_manifest.csv": "fe0e8068c135ede8b432f0c878da79b4e35761811919812a1a54652ac345274a",
+    "reproducibility_manifest.json": "41241fd92b85db46e62d42243de8d4da394acf791a2e4f74d1eb86716f71ae27"
+  },
+  "open_limitations": [
+    "No Git repository/commit was available at release time.",
+    "Recording-session independence remains unverified.",
+    "Dataset is a single rig / nominal speed."
+  ],
+  "next_stage_allowed": true
+}

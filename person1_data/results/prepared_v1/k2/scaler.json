@@ -1,0 +1,40 @@
+{
+  "mean": [
+    -1.904239987825114e-09,
+    1.2941939074437943e-08,
+    -1.5701351720502317e-08
+  ],
+  "std": [
+    0.0009189651369702678,
+    0.0008704267304740039,
+    0.0009803281294706726
+  ],
+  "scale": [
+    0.0009189651369702678,
+    0.0008704267304740039,
+    0.0009803281294706726
+  ],
+  "n_samples": 5118968,
+  "fit_recording_ids": [
+    "trimMA342_1200rpm_AW__D_03",
+    "trimMA342_1200rpm_AW__D_14",
+    "trimMA342_1200rpm_A__DW_00",
+    "trimMA342_1200rpm_A__DW_11",
+    "trimMA342_1200rpm_A__D_00",
+    "trimMA342_1200rpm_A__D_03",
+    "trimMA342_1200rpm_A__D_06",
+    "trimMA342_1200rpm_A__D_07",
+    "trimMA342_1200rpm_A__D_09",
+    "trimMA342_1200rpm_A__D_10",
+    "trimMA342_1200rpm_A__D_11",
+    "trimMA342_1200rpm_A__D_15",
+    "trimMA342_1200rpm_A__Dvv_04",
+    "trimMA342_1200rpm_A__Dvv_05",
+    "trimMA342_1200rpm_Avv__D_05",
+    "trimMA342_1200rpm_Avv__D_11",
+    "trimMA342_1200rpm_Avv__Dvv_04",
+    "trimMA342_1200rpm_Avv__Dvv_05"
+  ],
+  "weighting": "all samples in selected train records, including unused tail",
+  "ddof": 0
+}

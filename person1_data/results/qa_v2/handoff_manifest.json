@@ -1,0 +1,92 @@
+{
+  "release": "EPSON_PERSON1_HANDOFF_V1",
+  "created_at_local": "2026-10-04T07:02:22.241327+07:00",
+  "purpose": "Minimal handoff evidence index",
+  "files": [
+    {
+      "path": "results/qa_v2/dataset_card.txt",
+      "bytes": 3878,
+      "sha256": "267df1f273fb03919afc45e398f3be1329a87244658688822d3afdbb439ef741"
+    },
+    {
+      "path": "results/qa_v2/source_register.csv",
+      "bytes": 3229,
+      "sha256": "2136b9dc44b926b61b7351dff06304734309e869f9e0c6214ffcd1c26ef21929"
+    },
+    {
+      "path": "results/qa_v2/access_and_scarcity.csv",
+      "bytes": 3970,
+      "sha256": "256c18b199f14e35418e962c7322a32f42947677ae2cdf792ef1aa007dee312d"
+    },
+    {
+      "path": "results/qa_v2/data_contract.json",
+      "bytes": 14739,
+      "sha256": "6645d70e6f4b3cddc76abffd700eba545478ed5ee81fa62342e4e7e46eebdc83"
+    },
+    {
+      "path": "results/qa_v2/protocol_frozen.txt",
+      "bytes": 2989,
+      "sha256": "1e673c98e3f31e01196ae2e19064f2df179729aeff61249ea68e2a31c7bc86ff"
+    },
+    {
+      "path": "results/qa_v2/near_duplicate_stage3_final.json",
+      "bytes": 833,
+      "sha256": "4f3ff05afa560b731c26865a8bc9def145656dbfcf17865d62e6b88017166485"
+    },
+    {
+      "path": "results/qa_v2/loader_selftest.json",
+      "bytes": 4464,
+      "sha256": "b3fa04a8f0942141554dc1b4234c543b36f4bc3f80df336f4f1f09965f3fcf1f"
+    },
+    {
+      "path": "results/qa_v2/stage6_final.json",
+      "bytes": 989,
+      "sha256": "f0074b048119726aea0acc9f88ab4fed1ef7c8897566455dd8463a77576e802e"
+    },
+    {
+      "path": "results/qa_v2/stage6_reproduction_final.json",
+      "bytes": 599,
+      "sha256": "ef465c7f55d6c50a8090b055ca88435e98e6e87136a4f52dbe6de9fda86325f8"
+    },
+    {
+      "path": "results/qa_v2/reproducibility_report.json",
+      "bytes": 26657,
+      "sha256": "b015c60715b04b806dcf1599b77a70d2778905b604103b2c7dac42dafb5011db"
+    },
+    {
+      "path": "results/qa_v2/package_manifest.csv",
+      "bytes": 15348,
+      "sha256": "fe0e8068c135ede8b432f0c878da79b4e35761811919812a1a54652ac345274a"
+    },
+    {
+      "path": "results/qa_v2/consumer_smoke_test.json",
+      "bytes": 914,
+      "sha256": "51aa87d44de8106b40f9d95ef6c2a9a0038238e84e0f52b567f0d5633bd05d87"
+    },
+    {
+      "path": "results/qa_v2/HANDOFF_README.txt",
+      "bytes": 3559,
+      "sha256": "54a4efafb9a8ab52b4e42cb61562bb3d67bc682becd382bd74ceb13b8640a691"
+    },
+    {
+      "path": "results/qa_v2/RECIPIENT_SMOKE_TEST.txt",
+      "bytes": 2434,
+      "sha256": "93dd37d804893697ce96b2299822da2c12c15120b7e7bd7e7ff054e99e830865"
+    },
+    {
+      "path": "results/qa_v2/RECIPIENT_ACCEPTANCE_TEMPLATE.txt",
+      "bytes": 1496,
+      "sha256": "52f2a8a52ad677957ddd44cdc1129fa59b6ef637c00e09481e190a6f2f1fdec0"
+    },
+    {
+      "path": "results/qa_v2/HANDOFF_CHECKLIST.txt",
+      "bytes": 4266,
+      "sha256": "c04e9bc90aa90aa054eeac19b2fc133d1e5f700066143577f8ea90b75da80929"
+    },
+    {
+      "path": "stage7_handoff_readiness.py",
+      "bytes": 26753,
+      "sha256": "ad3aff7221717517d10425493a1d9c6571186f2c5ee13f4fdd89c66bd609dc33"
+    }
+  ]
+}

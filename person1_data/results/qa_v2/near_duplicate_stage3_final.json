@@ -1,0 +1,21 @@
+{
+  "stage": 3,
+  "name": "near_duplicate_and_shifted_duplicate_review",
+  "status": "PASS_WITH_OPEN_LIMITATION",
+  "record_count": 96,
+  "all_unique_pairs_screened": 4560,
+  "frozen_candidate_pairs": 363,
+  "cross_split_candidate_pairs": 239,
+  "multisegment_cross_split_review_pairs": 20,
+  "synthetic_selftest_status": "PASS",
+  "confirmed_overlap_pairs": 0,
+  "split_action": "NONE",
+  "record_deletion": "NONE",
+  "decision": "No confirmed near-duplicate or common-shift recording overlap found under the frozen protocol.",
+  "open_limitations": [
+    "Recording-session metadata are unavailable.",
+    "Passing this protocol does not prove complete source independence.",
+    "Strong periodic signals can produce high cross-correlation at multiple cycle-equivalent lags."
+  ],
+  "next_stage_allowed": true
+}

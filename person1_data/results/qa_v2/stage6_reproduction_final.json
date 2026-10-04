@@ -1,0 +1,17 @@
+{
+  "stage": 6,
+  "name": "independent_reproduction_closure",
+  "status": "PASS_WITH_OPEN_LIMITATION",
+  "independent_output_directory_reproduction": true,
+  "array_content_exact": true,
+  "scalers_exact": true,
+  "window_metadata_exact": true,
+  "cross_machine_reproduction": false,
+  "open_limitations": [
+    "No Git repository was available at release time.",
+    "Reproduction was performed on the same machine/environment.",
+    "Recording-session independence remains unverified.",
+    "Dataset represents a single rig and nominal speed."
+  ],
+  "next_stage_allowed": true
+}

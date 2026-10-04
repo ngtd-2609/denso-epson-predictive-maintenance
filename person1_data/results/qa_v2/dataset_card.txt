@@ -1,0 +1,136 @@
+﻿EPSON ROTOR KIT VIBRATION DATASET — DATASET CARD
+Checked date: 2026-10-04
+
+1. SOURCE
+Official dataset page:
+https://www.epsondevice.com/sensing/en/dataset/index.html
+
+Paper:
+https://arxiv.org/abs/2512.15344
+
+Local archive source:
+https://www.epsondevice.com/sensing/en/dataset/zip/rotorkit_dataset_trimmed.zip
+
+Archive SHA256:
+aff2b544ad7c3c4c219cb35414c3b0560012af8b3da01854da69bf355fc884c8
+
+2. MEASUREMENT SYSTEM
+Apparatus: Shinkawa Electric rotor kit AA31-020
+Sensor: Seiko Epson M-A342 3-axis digital quartz vibration sensor
+Mounting: upper bearing housing
+Channels:
+- X: lateral direction
+- Y: axial direction
+- Z: vertical direction
+
+Measured quantity: vibration velocity
+Raw unit: mm/s
+Nominal sampling frequency: 3000 Hz
+Nominal rotation speed: 1200 RPM = 20 Hz fundamental frequency
+
+3. DATASET STRUCTURE
+Total files observed locally: 96
+Archive entries: 96
+
+Class 0: A__D - 16 files
+Class 1: AW__D - 16 files
+Class 2: A__DW - 16 files
+Class 3: Avv__D - 16 files
+Class 4: A__Dvv - 16 files
+Class 5: Avv__Dvv - 16 files
+
+These are six controlled washer configurations:
+one normal configuration and five simulated unbalance configurations.
+They must not be described as five distinct failure mechanisms or as ordered severity levels.
+
+4. DATA VERSION
+Version used: Epson trimmed dataset.
+
+The provider states that the first 30000 samples (10 seconds)
+containing startup/transient behavior were removed.
+
+The local pipeline therefore DOES NOT remove another 10 seconds.
+
+Observed file lengths are taken from the actual CSV files and may differ
+from approximate values stated on the public webpage.
+
+5. LABEL AND PROVENANCE
+Labels are inferred from Epson filename/configuration mapping
+and recorded in public_manifest.csv.
+
+recording_id identifies a measurement file.
+It is NOT a verified session ID.
+
+session_id remains unknown because the current evidence does not contain
+per-file measurement date/session/remount/device-instance metadata.
+
+The paper describes 16 independent data files per class,
+but this does not provide enough per-file metadata to prove
+session-independent evaluation.
+
+6. CURRENT PIPELINE STATE
+Basic pipeline already completed:
+- audit_v1
+- split_seed42
+- prepared_v1
+- verification.json
+
+Split unit: file/recording level
+Window length: 3000 samples
+Stride: 3000 samples
+Tensor channels: X, Y, Z
+Raw unit: mm/s
+Prepared X unit: dimensionless z-score
+
+Scarcity budgets available:
+k = 1, 2, 4 fault files per abnormal configuration.
+
+Normal-only train records:
+8
+
+Labeled abnormal validation records:
+20
+
+7. ARCHIVE INTEGRITY
+Archive SHA256:
+aff2b544ad7c3c4c219cb35414c3b0560012af8b3da01854da69bf355fc884c8
+
+Archive bytes:
+445912686
+
+Archive entries:
+96
+
+Entries with crc_checked != true:
+0
+
+8. KNOWN LIMITATIONS
+- No verified per-file session metadata.
+- Near-duplicate or time-shifted duplicate analysis is not yet complete.
+- Single controlled rig and one nominal speed only.
+- No claim of transfer to another machine, sensor, factory or speed.
+- CSV files do not contain per-sample timestamps, so timestamp jitter cannot be assessed.
+- Dataset-specific redistribution/commercial-use permission has not been verified.
+- No detector or generator result is claimed in Person 1 work.
+
+9. USAGE BOUNDARY
+Suitable at this stage for file-level research and baseline development
+with the limitations above explicitly disclosed.
+
+Do not describe the current evidence as:
+- DENSO factory data
+- multi-speed validation
+- session-independent validation
+- prediction of remaining useful life
+- proof of deployment/generalization to another machine
+
+10. STATUS
+CHAPTER 1 / STAGE 1 STATUS:
+PASS for source, label, unit, sampling-rate and local-file provenance checks.
+
+OPEN-LIMITATION:
+- session provenance
+- dataset redistribution/commercial license
+- near/shifted duplicate analysis
+
+These open limitations must not be silently converted to PASS.

@@ -1,0 +1,132 @@
+{
+  "checks": {
+    "k1": {
+      "passed": true,
+      "data": {
+        "train": {
+          "shape": [
+            1222,
+            3,
+            3000
+          ],
+          "records": 13
+        },
+        "validation": {
+          "shape": [
+            2256,
+            3,
+            3000
+          ],
+          "records": 24
+        },
+        "test": {
+          "shape": [
+            2256,
+            3,
+            3000
+          ],
+          "records": 24
+        }
+      },
+      "cross_split_exact_window_collisions": 0
+    },
+    "k2": {
+      "passed": true,
+      "data": {
+        "train": {
+          "shape": [
+            1692,
+            3,
+            3000
+          ],
+          "records": 18
+        },
+        "validation": {
+          "shape": [
+            2256,
+            3,
+            3000
+          ],
+          "records": 24
+        },
+        "test": {
+          "shape": [
+            2256,
+            3,
+            3000
+          ],
+          "records": 24
+        }
+      },
+      "cross_split_exact_window_collisions": 0
+    },
+    "k4": {
+      "passed": true,
+      "data": {
+        "train": {
+          "shape": [
+            2632,
+            3,
+            3000
+          ],
+          "records": 28
+        },
+        "validation": {
+          "shape": [
+            2256,
+            3,
+            3000
+          ],
+          "records": 24
+        },
+        "test": {
+          "shape": [
+            2256,
+            3,
+            3000
+          ],
+          "records": 24
+        }
+      },
+      "cross_split_exact_window_collisions": 0
+    },
+    "normal_only": {
+      "passed": true,
+      "data": {
+        "train": {
+          "shape": [
+            752,
+            3,
+            3000
+          ],
+          "records": 8
+        },
+        "validation": {
+          "shape": [
+            2256,
+            3,
+            3000
+          ],
+          "records": 24
+        },
+        "test": {
+          "shape": [
+            2256,
+            3,
+            3000
+          ],
+          "records": 24
+        }
+      },
+      "cross_split_exact_window_collisions": 0
+    }
+  },
+  "code_sha256": "6e185f10eaf800634dd33eb69f201c11de8ebb287f37e036de8758b027e60242",
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "limitations": [
+    "No model training",
+    "Near/shifted duplicates not fully ruled out",
+    "Single rig/speed; no session metadata"
+  ]
+}

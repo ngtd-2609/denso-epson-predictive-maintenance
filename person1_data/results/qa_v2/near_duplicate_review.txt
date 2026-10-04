@@ -1,0 +1,111 @@
+EPSON NEAR-DUPLICATE CANDIDATE SCREEN
+========================================================================
+
+Records scanned: 96
+All unique pairs: 4560
+Screen candidates: 363
+Cross-split candidates: 239
+
+Candidate status does NOT mean duplicate.
+Candidates require long-segment common-lag verification.
+
+Top 20 cross-split candidates by feature distance:
+- trimMA342_1200rpm_A__Dvv_06 [validation] <-> trimMA342_1200rpm_Avv__Dvv_12 [train], distance=0.791436, classes=4/5
+- trimMA342_1200rpm_A__D_12 [validation] <-> trimMA342_1200rpm_A__D_13 [test], distance=0.802586, classes=0/0
+- trimMA342_1200rpm_AW__D_01 [validation] <-> trimMA342_1200rpm_AW__D_05 [test], distance=0.840360, classes=1/1
+- trimMA342_1200rpm_Avv__D_04 [validation] <-> trimMA342_1200rpm_Avv__D_05 [train], distance=0.858600, classes=3/3
+- trimMA342_1200rpm_A__Dvv_06 [validation] <-> trimMA342_1200rpm_A__Dvv_09 [train], distance=0.863135, classes=4/4
+- trimMA342_1200rpm_AW__D_07 [train] <-> trimMA342_1200rpm_AW__D_10 [validation], distance=0.867015, classes=1/1
+- trimMA342_1200rpm_Avv__Dvv_03 [train] <-> trimMA342_1200rpm_Avv__Dvv_11 [validation], distance=0.881463, classes=5/5
+- trimMA342_1200rpm_AW__D_01 [validation] <-> trimMA342_1200rpm_AW__D_02 [train], distance=0.882957, classes=1/1
+- trimMA342_1200rpm_AW__D_02 [train] <-> trimMA342_1200rpm_AW__D_06 [test], distance=0.883994, classes=1/1
+- trimMA342_1200rpm_A__D_12 [validation] <-> trimMA342_1200rpm_A__D_15 [train], distance=0.885601, classes=0/0
+- trimMA342_1200rpm_Avv__Dvv_11 [validation] <-> trimMA342_1200rpm_Avv__Dvv_12 [train], distance=0.887274, classes=5/5
+- trimMA342_1200rpm_A__Dvv_06 [validation] <-> trimMA342_1200rpm_Avv__D_11 [train], distance=0.890394, classes=4/3
+- trimMA342_1200rpm_A__D_10 [train] <-> trimMA342_1200rpm_A__D_13 [test], distance=0.891828, classes=0/0
+- trimMA342_1200rpm_A__DW_13 [train] <-> trimMA342_1200rpm_A__DW_15 [validation], distance=0.905146, classes=2/2
+- trimMA342_1200rpm_A__D_14 [test] <-> trimMA342_1200rpm_A__D_15 [train], distance=0.908274, classes=0/0
+- trimMA342_1200rpm_A__Dvv_06 [validation] <-> trimMA342_1200rpm_A__Dvv_15 [train], distance=0.909166, classes=4/4
+- trimMA342_1200rpm_A__D_13 [test] <-> trimMA342_1200rpm_A__D_15 [train], distance=0.909425, classes=0/0
+- trimMA342_1200rpm_Avv__D_04 [validation] <-> trimMA342_1200rpm_Avv__D_11 [train], distance=0.916436, classes=3/3
+- trimMA342_1200rpm_A__DW_02 [validation] <-> trimMA342_1200rpm_A__DW_03 [test], distance=0.917691, classes=2/2
+- trimMA342_1200rpm_A__D_11 [train] <-> trimMA342_1200rpm_A__D_13 [test], distance=0.918823, classes=0/0
+
+No source/session relationship is concluded from this screen.
+
+
+===== LONG-SEGMENT VERIFICATION =====
+
+Frozen candidate pairs measured: 363
+Cross-split candidate pairs measured: 239
+Segment selection: fixed middle 10 seconds from each recording.
+Lag rule: one common lag across X/Y/Z, limited to +/- 6000 samples.
+No automatic duplicate threshold was applied.
+No recording was deleted or reassigned.
+Status: MEASUREMENT_COMPLETE_REVIEW_REQUIRED
+
+
+===== STAGE 3 FINAL REVIEW =====
+
+Status: PASS WITH OPEN-LIMITATION
+
+Frozen protocol:
+- Exact duplicate checks reused from the existing audit.
+- Synthetic shifted-copy self-test completed before real-data verification.
+- Candidate screen covered all 96 Epson trimmed recordings.
+- All 4560 unique recording pairs were screened by fixed features.
+- Frozen candidate set: 363 pairs.
+- Cross-split candidates in the frozen set: 239 pairs.
+- All 363 candidates received long-segment common-lag verification.
+- The strongest 20 cross-split candidates additionally received fixed
+  START / MIDDLE / END 10-second verification.
+
+Verification rule:
+- Only one common time lag was allowed for X/Y/Z in each comparison.
+- Independent per-channel alignment was not used.
+- No correlation threshold was used for automatic deletion.
+- No split modification was performed automatically.
+
+Multi-segment observations:
+- Strongest three-segment mean correlation:
+  0.938456
+- Corresponding mean standardized RMSE:
+  0.350598
+- Strong correlations remain materially below the known-copy synthetic
+  fixtures and retain substantial standardized residual error.
+- Several candidate lag estimates change by approximately integer
+  multiples of the nominal 20-Hz mechanical period (~150 samples),
+  consistent with periodic cross-correlation ambiguity.
+- Some pairs maintain a comparatively stable phase offset, but their
+  residual mismatch remains substantial and does not establish common
+  recording provenance.
+
+Human review decision:
+CONFIRMED_OVERLAP pairs: 0
+
+Candidate interpretation:
+NOT_CONFIRMED as recording overlap under the frozen protocol.
+
+Data action:
+- Keep all 96 recordings.
+- Do not delete any recording.
+- Do not merge recording IDs.
+- Do not modify the existing train/validation/test split.
+- Continue using the current prepared-data version.
+
+Important limitation:
+This result does NOT prove recording-session independence.
+Session metadata are unavailable.
+It also does not prove that every possible source relationship has been
+excluded.
+
+Stage 3 conclusion:
+No confirmed near-duplicate or common-shift recording overlap was found
+among the frozen screened candidates.
+
+The observed high correlations are compatible with strongly periodic
+vibration signals acquired from the same rig at the same nominal speed,
+and are not sufficient evidence of copied recordings.
+
+Official evaluation does not need to be stopped on the basis of the
+current near-duplicate analysis.

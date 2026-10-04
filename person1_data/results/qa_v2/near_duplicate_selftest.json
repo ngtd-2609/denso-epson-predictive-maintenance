@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "seed": 20261004,
+  "fs_hz": 3000.0,
+  "n_samples": 30000,
+  "true_common_lag": 731,
+  "max_lag": 6000,
+  "important_note": "Numerical criteria in this synthetic self-test validate the implementation on known fixtures only. They are not automatic duplicate/deletion thresholds for real Epson data.",
+  "checks": {
+    "exact_copy_lag_zero": true,
+    "exact_copy_corr_near_one": true,
+    "shift_recovered": true,
+    "shift_corr_near_one": true,
+    "shift_plus_noise_recovered": true,
+    "shift_plus_noise_high_similarity": true,
+    "scaled_shift_recovered": true,
+    "scaled_shift_high_similarity": true,
+    "negative_controls_separated": true,
+    "negative_rmse_larger": true
+  },
+  "results": {
+    "positive_exact_copy": {
+      "estimated_common_lag": 0,
+      "lag_score": 1.0,
+      "matched_samples": 30000,
+      "per_channel_corr": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mean_channel_corr": 1.0,
+      "joint_standardized_rmse": 0.0,
+      "joint_standardized_mae": 0.0,
+      "std_ratio_y_over_x": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "positive_common_shift": {
+      "estimated_common_lag": 731,
+      "lag_score": 0.9867127760410064,
+      "matched_samples": 29269,
+      "per_channel_corr": [
+        0.9999999999999998,
+        0.9999999999999998,
+        1.0
+      ],
+      "mean_channel_corr": 0.9999999999999999,
+      "joint_standardized_rmse": 0.0,
+      "joint_standardized_mae": 0.0,
+      "std_ratio_y_over_x": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "positive_shift_plus_noise": {
+      "estimated_common_lag": 731,
+      "lag_score": 0.9865125542304937,
+      "matched_samples": 29269,
+      "per_channel_corr": [
+        0.9998020012960526,
+        0.9998013457965338,
+        0.9998032059681062
+      ],
+      "mean_channel_corr": 0.9998021843535642,
+      "joint_standardized_rmse": 0.01989048246954586,
+      "joint_standardized_mae": 0.015849170235417875,
+      "std_ratio_y_over_x": [
+        1.0002975159007172,
+        1.0001333187362387,
+        1.0001652480036656
+      ]
+    },
+    "positive_scaled_shift_plus_noise": {
+      "estimated_common_lag": 731,
+      "lag_score": 0.9865718784438533,
+      "matched_samples": 29269,
+      "per_channel_corr": [
+        0.9998614449311738,
+        0.999859521402622,
+        0.9998610431568634
+      ],
+      "mean_channel_corr": 0.9998606698302197,
+      "joint_standardized_rmse": 0.016693122522810577,
+      "joint_standardized_mae": 0.01332985598875613,
+      "std_ratio_y_over_x": [
+        1.1800869037825312,
+        1.1801713311675242,
+        1.1801842214082392
+      ]
+    },
+    "negative_independent_same_fundamental": {
+      "estimated_common_lag": 4,
+      "lag_score": 0.3503559065065054,
+      "matched_samples": 29996,
+      "per_channel_corr": [
+        -0.6790990919470897,
+        0.8681265873673875,
+        0.8625608610732395
+      ],
+      "mean_channel_corr": 0.35052945216451237,
+      "joint_standardized_rmse": 1.139710970233671,
+      "joint_standardized_mae": 0.8491936849947235,
+      "std_ratio_y_over_x": [
+        0.964460461231929,
+        0.9653897172926399,
+        0.9652212767207927
+      ]
+    },
+    "negative_same_frequency_different_source": {
+      "estimated_common_lag": -14,
+      "lag_score": 0.7825456601389359,
+      "matched_samples": 29986,
+      "per_channel_corr": [
+        0.7428538754525064,
+        0.7946849780799317,
+        0.8120884893823721
+      ],
+      "mean_channel_corr": 0.7832091143049368,
+      "joint_standardized_rmse": 0.6584692638158027,
+      "joint_standardized_mae": 0.537035034266986,
+      "std_ratio_y_over_x": [
+        0.7551251166869696,
+        0.8563041046991632,
+        0.961458489724855
+      ]
+    }
+  }
+}
