@@ -6,12 +6,12 @@
       "sha256": "1f9458f0d82c8cab5f15058733cdbdaede1341cc10b96279d035262e3f009492"
     },
     ".gitignore": {
-      "bytes": 165,
-      "sha256": "df5f2abcafaaaeff983959ebfba9849ea19c5a271cccb5fbe73bdd256bfdf1cf"
+      "bytes": 175,
+      "sha256": "be718f8365082bf13a7c48b50450f3acc5f9e54bd0a6765816881c02183a5b33"
     },
     "README.md": {
-      "bytes": 7234,
-      "sha256": "cda3994b152ee735d43d4f5f164e97e82e0947a36a0e2acabdd44069687b11ab"
+      "bytes": 7569,
+      "sha256": "79f17a267cb4498a94cf34674dfeba31d223d52ce1221af0732517cab4694dbd"
     },
     "docs/HANDOFF_RELEASE.md": {
       "bytes": 3390,
@@ -328,6 +328,10 @@
     "person1_data/verify_prepared.py": {
       "bytes": 3773,
       "sha256": "fbc13bf64d5cc27227b50050e1f82279cd4612216decc2da625b710b7327aae8"
+    },
+    "LICENSE": {
+      "bytes": 575,
+      "sha256": "7e3a167ea860e3c41e9237366c0ceabad2cd06bebea105f2fb9cec93664a34bd"
     }
   }
 }

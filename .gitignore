@@ -2,6 +2,7 @@
 !/.gitignore
 !/.gitattributes
 !/README.md
+!/LICENSE
 !/person1_data/
 !/docs/
 !/release_manifest.json

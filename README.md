@@ -1,5 +1,7 @@
 # DENSO — Epson: bàn giao dữ liệu Người 1
 
+Copyright © 2026 Nguyen Tung Duong. **All rights reserved.** Xem [thông báo bản quyền](LICENSE). Repo không cấp giấy phép mã nguồn mở; thông báo này không cấp quyền sử dụng lại. Dữ liệu Epson và tài liệu bên thứ ba vẫn theo quyền và điều kiện của chủ sở hữu tương ứng.
+
 Gói dữ liệu phục vụ thí nghiệm sinh tín hiệu bất thường và đánh giá detector khi thiếu dữ liệu lỗi. **Chưa có mô hình đã train hoặc kết quả cải thiện detector.** Tên repo không có nghĩa dữ liệu hỗ trợ dự đoán thời điểm hỏng/RUL.
 
 ## Bắt đầu nhanh
