@@ -9,6 +9,7 @@ Thử nghiệm bổ sung dữ liệu rung bằng cVAE khi chỉ có một hoặc
 | Nội dung | File hoặc thư mục |
 |---|---|
 | Báo cáo bài toán, phương pháp và kết quả | [bao_cao/Bao_cao.pdf](bao_cao/Bao_cao.pdf) |
+| Bản Word của báo cáo | [bao_cao/Bao_cao.docx](bao_cao/Bao_cao.docx) |
 | Slide thuyết trình | [thuyet_trinh/Thuyet_trinh.pptx](thuyet_trinh/Thuyet_trinh.pptx) |
 | Bản PDF của slide | [thuyet_trinh/Thuyet_trinh.pdf](thuyet_trinh/Thuyet_trinh.pdf) |
 | Bộ sinh đã huấn luyện và demo CPU | [demo](demo/README.md) |
@@ -16,7 +17,7 @@ Thử nghiệm bổ sung dữ liệu rung bằng cVAE khi chỉ có một hoặc
 | Mã chuẩn bị dữ liệu và thí nghiệm | [dataset](dataset/README.md), [experiment](experiment/README.md) |
 | Số liệu, trọng số và dự đoán kiểm chứng | [ket_qua](ket_qua/README.md) |
 
-Tải [gói hồ sơ tại Releases](https://github.com/ngtd-2609/denso-epson-predictive-maintenance/releases/tag/btc-submission-2026-10-11) nếu cần nộp một file ZIP. Gói nhẹ chứa tài liệu, demo, mã nguồn và bằng chứng; gói đầy đủ có thêm bộ dữ liệu tăng cường.
+Tải [gói hồ sơ tại Releases](https://github.com/ngtd-2609/denso-epson-predictive-maintenance/releases/tag/btc-submission-2026-10-11-v2) nếu cần nộp một file ZIP. Gói nhẹ chứa tài liệu, demo, mã nguồn và bằng chứng; gói đầy đủ có thêm bộ dữ liệu tăng cường. Báo cáo và slide ghi người thực hiện Nguyen Tung Duong, đơn vị Trường Phenikaa và ngày 11 tháng 10 năm 2026.
 
 ## Kết quả chính
 

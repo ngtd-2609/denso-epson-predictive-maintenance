@@ -1,6 +1,7 @@
 * -text
 # Preserve original evidence bytes and checksums across platforms.
 *.pdf binary
+*.docx binary
 *.pptx binary
 *.png binary
 *.pt binary

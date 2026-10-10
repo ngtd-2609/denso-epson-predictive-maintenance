@@ -1,13 +1,17 @@
 {
-  "version": "BTC_SUBMISSION_2026_10_11",
+  "version": "BTC_SUBMISSION_2026_10_11_V2",
   "files": {
     ".gitattributes": {
-      "sha256": "d0e0c3ce358cf8225aa266aa7b9bdbb8c06bd839f3b2a36b09e3503b37beded8",
-      "size_bytes": 140
+      "sha256": "3650044266caaf52b70447d10ce50dbbce74febb675cb405f42544343d2d5967",
+      "size_bytes": 154
     },
     ".gitignore": {
       "sha256": "d8548556e4afda8ceef6af589d0ff992b1bba7aee69a26697d4953477fbf9010",
       "size_bytes": 323
+    },
+    "bao_cao/Bao_cao.docx": {
+      "sha256": "73dd53a5225dc7014b571b5795b39984131486aeb7284ad3494af4fadb13c0b2",
+      "size_bytes": 177752
     },
     "bao_cao/Bao_cao.pdf": {
       "sha256": "85edc3900d1cdff4aa86ceabff974b1e12f4290c23204416f875ff8bbaa4daf9",
@@ -1638,8 +1642,8 @@
       "size_bytes": 575
     },
     "README.md": {
-      "sha256": "bd11e3ec4e683c7d28777b2cff09bc1d72bc5a63a9b666c1dd32dfae40e24637",
-      "size_bytes": 4496
+      "sha256": "90bae9236a065edf4a77b151c861864100bc0aad42f3f3106d34f307f3038570",
+      "size_bytes": 4705
     },
     "thuyet_trinh/Thuyet_trinh.pdf": {
       "sha256": "7a2f2e614bb0c5ee8a5b4a074b589a48a1d1031ac6ae6a1bbb2b49fd5a3805ff",
