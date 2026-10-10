@@ -1,0 +1,74 @@
+[
+  {
+    "profile": "k1",
+    "method": "real",
+    "label": "Chỉ dùng dữ liệu thật",
+    "n_seeds": 3,
+    "accuracy": 25.0,
+    "recall": 11.666666666666666,
+    "fpr": 8.333333333333332
+  },
+  {
+    "profile": "k1",
+    "method": "oversample",
+    "label": "Lặp lại mẫu thật",
+    "n_seeds": 3,
+    "accuracy": 30.555555555555557,
+    "recall": 20.0,
+    "fpr": 16.666666666666664
+  },
+  {
+    "profile": "k1",
+    "method": "simple",
+    "label": "Tăng cường đơn giản",
+    "n_seeds": 3,
+    "accuracy": 100.0,
+    "recall": 100.0,
+    "fpr": 0.0
+  },
+  {
+    "profile": "k1",
+    "method": "cvae",
+    "label": "Sinh bằng cVAE",
+    "n_seeds": 3,
+    "accuracy": 50.0,
+    "recall": 43.33333333333333,
+    "fpr": 16.666666666666664
+  },
+  {
+    "profile": "k4",
+    "method": "real",
+    "label": "Chỉ dùng dữ liệu thật",
+    "n_seeds": 3,
+    "accuracy": 95.83333333333334,
+    "recall": 96.66666666666667,
+    "fpr": 8.333333333333332
+  },
+  {
+    "profile": "k4",
+    "method": "oversample",
+    "label": "Lặp lại mẫu thật",
+    "n_seeds": 3,
+    "accuracy": 93.05555555555556,
+    "recall": 91.66666666666666,
+    "fpr": 0.0
+  },
+  {
+    "profile": "k4",
+    "method": "simple",
+    "label": "Tăng cường đơn giản",
+    "n_seeds": 3,
+    "accuracy": 100.0,
+    "recall": 100.0,
+    "fpr": 0.0
+  },
+  {
+    "profile": "k4",
+    "method": "cvae",
+    "label": "Sinh bằng cVAE",
+    "n_seeds": 3,
+    "accuracy": 81.94444444444444,
+    "recall": 78.33333333333333,
+    "fpr": 0.0
+  }
+]

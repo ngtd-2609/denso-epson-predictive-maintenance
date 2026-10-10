@@ -1,0 +1,281 @@
+{
+  "window": {
+    "n": 2256,
+    "confusion_matrix": [
+      [
+        358,
+        18
+      ],
+      [
+        1406,
+        474
+      ]
+    ],
+    "recall": 0.2521276595744681,
+    "fpr": 0.047872340425531915,
+    "macro_f1": 0.3671210855620873,
+    "average_precision": 0.9212929879145333,
+    "threshold": 0.8922024816274644
+  },
+  "recording": {
+    "n": 24,
+    "confusion_matrix": [
+      [
+        3,
+        1
+      ],
+      [
+        13,
+        7
+      ]
+    ],
+    "recall": 0.35,
+    "fpr": 0.25,
+    "macro_f1": 0.4,
+    "average_precision": 0.9234143737239712,
+    "threshold": 0.8319977124003655
+  },
+  "six_class": {
+    "macro_f1": 0.12562030422694437,
+    "confusion_matrix": [
+      [
+        281,
+        2,
+        0,
+        0,
+        93,
+        0
+      ],
+      [
+        267,
+        6,
+        6,
+        0,
+        97,
+        0
+      ],
+      [
+        269,
+        8,
+        65,
+        0,
+        34,
+        0
+      ],
+      [
+        251,
+        22,
+        32,
+        2,
+        69,
+        0
+      ],
+      [
+        289,
+        13,
+        0,
+        1,
+        73,
+        0
+      ],
+      [
+        15,
+        3,
+        25,
+        0,
+        333,
+        0
+      ]
+    ]
+  },
+  "recording_predictions": [
+    {
+      "recording_id": "trimMA342_1200rpm_AW__D_05",
+      "y": 1,
+      "score": 0.896096315631207,
+      "prediction": 1
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_AW__D_06",
+      "y": 1,
+      "score": 0.5822290655304777,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_AW__D_11",
+      "y": 1,
+      "score": 0.5162269542825982,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_AW__D_13",
+      "y": 1,
+      "score": 0.6512343471750934,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_A__DW_01",
+      "y": 1,
+      "score": 0.40535846035531226,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_A__DW_03",
+      "y": 1,
+      "score": 0.6658481702287781,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_A__DW_07",
+      "y": 1,
+      "score": 0.7780244675405482,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_A__DW_10",
+      "y": 1,
+      "score": 0.795558501986113,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_A__D_01",
+      "y": 0,
+      "score": 0.3188797616835763,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_A__D_08",
+      "y": 0,
+      "score": 0.6548060301612032,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_A__D_13",
+      "y": 0,
+      "score": 0.32493892670708135,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_A__D_14",
+      "y": 0,
+      "score": 0.8502729455841348,
+      "prediction": 1
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_A__Dvv_00",
+      "y": 1,
+      "score": 0.49606723207584086,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_A__Dvv_02",
+      "y": 1,
+      "score": 0.6285592970299594,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_A__Dvv_10",
+      "y": 1,
+      "score": 0.552576427129989,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_A__Dvv_14",
+      "y": 1,
+      "score": 0.8602038694823042,
+      "prediction": 1
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_Avv__D_00",
+      "y": 1,
+      "score": 0.8498103439490846,
+      "prediction": 1
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_Avv__D_06",
+      "y": 1,
+      "score": 0.5915185752463468,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_Avv__D_12",
+      "y": 1,
+      "score": 0.5868829694041546,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_Avv__D_13",
+      "y": 1,
+      "score": 0.7805512082228001,
+      "prediction": 0
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_Avv__Dvv_00",
+      "y": 1,
+      "score": 0.9338587367946797,
+      "prediction": 1
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_Avv__Dvv_06",
+      "y": 1,
+      "score": 0.9397234697925284,
+      "prediction": 1
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_Avv__Dvv_10",
+      "y": 1,
+      "score": 0.9106241199881473,
+      "prediction": 1
+    },
+    {
+      "recording_id": "trimMA342_1200rpm_Avv__Dvv_14",
+      "y": 1,
+      "score": 0.8952318125582756,
+      "prediction": 1
+    }
+  ],
+  "per_class": {
+    "0": {
+      "window_n": 376,
+      "recording_n": 4,
+      "window_alarm_rate": 0.047872340425531915,
+      "recording_alarm_rate": 0.25,
+      "interpretation": "FPR"
+    },
+    "1": {
+      "window_n": 376,
+      "recording_n": 4,
+      "window_alarm_rate": 0.1622340425531915,
+      "recording_alarm_rate": 0.25,
+      "interpretation": "fault recall"
+    },
+    "2": {
+      "window_n": 376,
+      "recording_n": 4,
+      "window_alarm_rate": 0.031914893617021274,
+      "recording_alarm_rate": 0.0,
+      "interpretation": "fault recall"
+    },
+    "3": {
+      "window_n": 376,
+      "recording_n": 4,
+      "window_alarm_rate": 0.11702127659574468,
+      "recording_alarm_rate": 0.25,
+      "interpretation": "fault recall"
+    },
+    "4": {
+      "window_n": 376,
+      "recording_n": 4,
+      "window_alarm_rate": 0.14095744680851063,
+      "recording_alarm_rate": 0.25,
+      "interpretation": "fault recall"
+    },
+    "5": {
+      "window_n": 376,
+      "recording_n": 4,
+      "window_alarm_rate": 0.8085106382978723,
+      "recording_alarm_rate": 1.0,
+      "interpretation": "fault recall"
+    }
+  }
+}

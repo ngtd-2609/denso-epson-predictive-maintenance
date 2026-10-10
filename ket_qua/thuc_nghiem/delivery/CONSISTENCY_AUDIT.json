@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "checked_models": 24,
+  "checks": [
+    {
+      "profile": "k1",
+      "seed": 11,
+      "method": "real",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k1",
+      "seed": 11,
+      "method": "oversample",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k1",
+      "seed": 11,
+      "method": "simple",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k1",
+      "seed": 11,
+      "method": "cvae",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k1",
+      "seed": 22,
+      "method": "real",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k1",
+      "seed": 22,
+      "method": "oversample",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k1",
+      "seed": 22,
+      "method": "simple",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k1",
+      "seed": 22,
+      "method": "cvae",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k1",
+      "seed": 33,
+      "method": "real",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k1",
+      "seed": 33,
+      "method": "oversample",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k1",
+      "seed": 33,
+      "method": "simple",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k1",
+      "seed": 33,
+      "method": "cvae",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k4",
+      "seed": 11,
+      "method": "real",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k4",
+      "seed": 11,
+      "method": "oversample",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k4",
+      "seed": 11,
+      "method": "simple",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k4",
+      "seed": 11,
+      "method": "cvae",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k4",
+      "seed": 22,
+      "method": "real",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k4",
+      "seed": 22,
+      "method": "oversample",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k4",
+      "seed": 22,
+      "method": "simple",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k4",
+      "seed": 22,
+      "method": "cvae",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k4",
+      "seed": 33,
+      "method": "real",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k4",
+      "seed": 33,
+      "method": "oversample",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k4",
+      "seed": 33,
+      "method": "simple",
+      "predictions_and_metrics": "PASS"
+    },
+    {
+      "profile": "k4",
+      "seed": 33,
+      "method": "cvae",
+      "predictions_and_metrics": "PASS"
+    }
+  ],
+  "exported_dataset": {
+    "path": "output\\experiments\\main_gpu_final\\delivery\\augmented_k1_seed11.npz",
+    "status": "PASS"
+  }
+}

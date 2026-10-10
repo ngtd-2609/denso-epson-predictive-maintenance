@@ -1,0 +1,8 @@
+# Versions actually used on Windows 11 / Python 3.13.5 in this project.
+# Install torch separately: torch==2.7.1 from https://download.pytorch.org/whl/cu128
+numpy==2.3.5
+scipy==1.17.1
+scikit-learn==1.8.0
+pandas==2.3.3
+matplotlib==3.10.9
+pytest==9.1.1

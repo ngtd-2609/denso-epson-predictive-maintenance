@@ -1,98 +1,58 @@
-# DENSO — Epson: bàn giao dữ liệu Người 1: Tung Duong
+# Tạo dữ liệu rung bất thường để hỗ trợ phát hiện lỗi thiết bị
 
-Copyright © 2026 Nguyen Tung Duong. **All rights reserved.** Xem [thông báo bản quyền](LICENSE). Repo không cấp giấy phép mã nguồn mở; thông báo này không cấp quyền sử dụng lại. Dữ liệu Epson và tài liệu bên thứ ba vẫn theo quyền và điều kiện của chủ sở hữu tương ứng.
+**Nguyen Tung Duong — Trường Phenikaa**
 
-Gói dữ liệu phục vụ thí nghiệm sinh tín hiệu bất thường và đánh giá detector khi thiếu dữ liệu lỗi. **Chưa có mô hình đã train hoặc kết quả cải thiện detector.** Tên repo không có nghĩa dữ liệu hỗ trợ dự đoán thời điểm hỏng/RUL.
+Thử nghiệm bổ sung dữ liệu rung bằng cVAE khi chỉ có một hoặc bốn bản ghi lỗi mỗi lớp để huấn luyện. Bốn phương án gồm dữ liệu thật, lặp mẫu, tăng cường đơn giản và cVAE. Tất cả dùng cùng CNN và đánh giá trên dữ liệu thật giữ riêng của Epson.
 
-## Bắt đầu nhanh
+## Hồ sơ gửi Ban tổ chức
 
-Các lệnh dưới đây chạy từ thư mục gốc của repo, không phụ thuộc ổ đĩa hay tên tài khoản. Môi trường đã kiểm tra: Python 3.13.5. GPU không cần cho bước này.
+| Nội dung | File hoặc thư mục |
+|---|---|
+| Báo cáo bài toán, phương pháp và kết quả | [bao_cao/Bao_cao.pdf](bao_cao/Bao_cao.pdf) |
+| Slide thuyết trình | [thuyet_trinh/Thuyet_trinh.pptx](thuyet_trinh/Thuyet_trinh.pptx) |
+| Bản PDF của slide | [thuyet_trinh/Thuyet_trinh.pdf](thuyet_trinh/Thuyet_trinh.pdf) |
+| Bộ sinh đã huấn luyện và demo CPU | [demo](demo/README.md) |
+| Dữ liệu tăng cường 4.512 đoạn | [du_lieu](du_lieu/README.md) |
+| Mã chuẩn bị dữ liệu và thí nghiệm | [dataset](dataset/README.md), [experiment](experiment/README.md) |
+| Số liệu, trọng số và dự đoán kiểm chứng | [ket_qua](ket_qua/README.md) |
 
-```powershell
-git clone https://github.com/ngtd-2609/denso-epson-predictive-maintenance.git
-cd denso-epson-predictive-maintenance
-python -m venv .venv
-# Windows PowerShell: dùng trực tiếp Python trong venv, không cần đổi execution policy.
-.venv/Scripts/python.exe -m pip install -r person1_data/requirements.txt
-.venv/Scripts/python.exe person1_data/handoff.py verify
-```
+Tải [gói hồ sơ tại Releases](https://github.com/ngtd-2609/denso-epson-predictive-maintenance/releases/tag/btc-submission-2026-10-11) nếu cần nộp một file ZIP. Gói nhẹ chứa tài liệu, demo, mã nguồn và bằng chứng; gói đầy đủ có thêm bộ dữ liệu tăng cường.
 
-Linux/macOS dùng `.venv/bin/python` thay cho `.venv/Scripts/python.exe`. Nếu đã có môi trường phù hợp, có thể dùng `python` trong các lệnh.
+## Kết quả chính
 
-## Nhận dữ liệu
+Trung bình ba seed 11/22/33 trên cùng 24 bản ghi test; các chỉ số dưới đây tính theo phần trăm. k1/k4 tương ứng một/bốn bản ghi lỗi mỗi lớp để huấn luyện, cùng tám bản ghi bình thường.
 
-Repo chứa code và metadata, **không chứa raw CSV, archive hoặc mảng NPZ**. Lấy bản **trimmed** tại [trang Epson chính thức](https://www.epsondevice.com/sensing/en/dataset/index.html), tên archive `rotorkit_dataset_trimmed.zip`. Đọc điều kiện sử dụng của nguồn; quyền tái phân phối/chuyển sang phạm vi thương mại chưa được xác minh trong hồ sơ này.
+| Mức | Phương án | Độ chính xác | Phát hiện lỗi | Báo nhầm |
+|---|---|---:|---:|---:|
+| k1 | Chỉ dùng dữ liệu thật | 25.0 | 11.7 | 8.3 |
+| k1 | Lặp lại mẫu thật | 30.6 | 20.0 | 16.7 |
+| k1 | Tăng cường đơn giản | 100.0 | 100.0 | 0.0 |
+| k1 | Sinh bằng cVAE | 50.0 | 43.3 | 16.7 |
+| k4 | Chỉ dùng dữ liệu thật | 95.8 | 96.7 | 8.3 |
+| k4 | Lặp lại mẫu thật | 93.1 | 91.7 | 0.0 |
+| k4 | Tăng cường đơn giản | 100.0 | 100.0 | 0.0 |
+| k4 | Sinh bằng cVAE | 81.9 | 78.3 | 0.0 |
 
-Đặt archive tại `person1_data/downloads/rotorkit_dataset_trimmed.zip` (tạo thư mục nếu chưa có). SHA-256 của bản đã dùng:
+cVAE tăng tỷ lệ phát hiện ở k1 nhưng cũng tăng báo nhầm; ở k4, tỷ lệ phát hiện thấp hơn chỉ dùng dữ liệu thật. Tăng cường đơn giản cho kết quả tốt nhất trong phép so sánh này. RMS mẫu cVAE chỉ khoảng 17,5–25,8% so với dữ liệu thật theo kênh trong các tổ hợp đã kiểm tra.
 
-```text
-aff2b544ad7c3c4c219cb35414c3b0560012af8b3da01854da69bf355fc884c8
-```
+Kết quả 100% ở bảng là phân biệt bình thường/bất thường theo bản ghi trên tập test nhỏ, không phải mọi đoạn một giây đều đúng. Tập test chỉ có bốn bản ghi bình thường. Dữ liệu gồm một hệ thử và một tốc độ danh định, chưa chứng minh hiệu quả trên thiết bị khác hoặc lỗi chưa xuất hiện trong huấn luyện.
 
-```powershell
-Get-FileHash person1_data/downloads/rotorkit_dataset_trimmed.zip -Algorithm SHA256
-.venv/Scripts/python.exe person1_data/extract_archive.py --archive person1_data/downloads/rotorkit_dataset_trimmed.zip --out person1_data/data/raw_epson
-.venv/Scripts/python.exe person1_data/handoff.py restore --raw person1_data/data/raw_epson
-.venv/Scripts/python.exe person1_data/handoff.py verify --data
-.venv/Scripts/python.exe person1_data/handoff.py smoke
-```
+## Chạy demo
 
-Chỉ tiếp tục nếu checksum archive khớp. Extract và restore từ chối ghi đè. Nếu đã có raw/NPZ đúng phiên bản, bỏ qua bước tương ứng và chạy kiểm tra. Nếu restore bị gián đoạn, giữ bản cũ để kiểm tra hoặc dùng một checkout sạch; không tự xóa dữ liệu chưa rõ nguồn.
-
-`restore` dùng **96 recording và split đã chốt**, xác minh checksum raw, tái tạo bốn profile rồi đối chiếu report, scaler, metadata cửa sổ và nội dung từng mảng với bản chuẩn trước khi công bố NPZ. Không chia lại dữ liệu. Chuẩn bị vài GB dung lượng trống cho raw, đầu ra và vùng tạm.
-
-Nếu sử dụng một gói prepared được chia sẻ hợp lệ qua kênh khác, đặt 12 file vào `person1_data/results/prepared_v1/{normal_only,k1,k2,k4}/{train,validation,test}.npz`, sau đó chạy `verify --data` và `smoke`. Gói phải khớp manifest; không dùng chỉ vì tên file giống nhau.
-
-## Giao diện cho Người 2 và Người 3
-
-Từ thư mục `person1_data`:
-
-```python
-from loader_v1 import EpsonPreparedLoader
-
-loader = EpsonPreparedLoader()
-train = loader.load("k1", "train")
-scaler = loader.get_scaler("k1")
-print(train.X.shape)  # (1222, 3, 3000)
-```
-
-| Profile | Cửa sổ train | Recording train | Scaler fit trên |
-|---|---:|---:|---|
-| normal_only | 752 | 8 | 8 recording normal train |
-| k1 | 1222 | 13 | 8 normal + 1 recording/lớp bất thường |
-| k2 | 1692 | 18 | 8 normal + 2 recording/lớp bất thường |
-| k4 | 2632 | 28 | 8 normal + 4 recording/lớp bất thường |
-
-Mỗi profile có 2.256 cửa sổ validation và 2.256 cửa sổ test. Các profile dùng cùng recording/vị trí cửa sổ đánh giá nhưng **giá trị chuẩn hóa khác nhau** do scaler khác nhau.
-
-- `X`: float32 `[N, 3, 3000]`, XYZ đồng bộ, z-score; raw là vận tốc rung mm/s, 3.000 Hz.
-- `y_class`: 0..5 cấu hình; `y_binary`: 0 normal, 1 abnormal. Đây là năm cấu hình mất cân bằng, không phải năm cơ chế hỏng độc lập.
-- `recording_id`, `start_sample`: truy xuất nguồn và đánh giá theo recording. Các cửa sổ không phải các phiên đo độc lập.
-- Người 2: detector/baseline, chọn ngưỡng bằng validation; test chỉ đánh giá cuối.
-- Người 3: generator chỉ dùng train đúng k, sinh XYZ đồng thời, lưu scaler/provenance; không dùng checkpoint học từ ngân sách lớn hơn cho k nhỏ.
-- Mọi phương pháp so sánh trong cùng k phải dùng cùng dữ liệu thực, scaler và tập đánh giá.
-- PyTorch là tùy chọn riêng cho training/adapter; cài bản phù hợp GPU/môi trường của người nhận. Không cài nguyên `pip_freeze.txt` của máy Người 1.
-
-## Tài liệu và bằng chứng
-
-- [Hợp đồng dữ liệu](person1_data/results/qa_v2/data_contract.json), [protocol](person1_data/results/qa_v2/protocol_frozen.txt), [quyền truy cập và scarcity](person1_data/results/qa_v2/access_and_scarcity.csv).
-- [Dataset card](person1_data/results/qa_v2/dataset_card.txt), [nguồn](person1_data/results/qa_v2/source_register.csv).
-- [Bàn giao theo vai trò](person1_data/results/qa_v2/HANDOFF_README.txt), [mẫu xác nhận người nhận](person1_data/results/qa_v2/RECIPIENT_ACCEPTANCE_TEMPLATE.txt).
-- [Thay đổi đóng gói và giới hạn](docs/HANDOFF_RELEASE.md).
-
-Các báo cáo cũ và script QA giữ nguyên để truy vết lần chạy ban đầu; có thể chứa đường dẫn `D:\DENSO_FACTORY` và checksum phiên bản cũ. **Quy trình nhận bàn giao hiện hành là README này và `handoff.py`**, không chạy lại script stage4/stage6/stage7 để nhận dữ liệu. Manifest hiện hành là `release_manifest.json`; `prepared_arrays_manifest.json` xác minh nội dung NPZ, không phụ thuộc metadata container ZIP.
-
-## Kiểm thử phần mềm
+Theo [hướng dẫn demo](demo/README.md), cài Python và PyTorch CPU rồi chạy:
 
 ```powershell
-.venv/Scripts/python.exe -m pip install -r person1_data/requirements-qa.txt
-.venv/Scripts/python.exe -m pytest person1_data/tests -q -p no:cacheprovider
+powershell -NoProfile -ExecutionPolicy Bypass -File demo/chay_demo.ps1 -Lop 1 -SoMau 5 -Seed 2026
 ```
 
-Tests dùng fixture giả để kiểm tra phần mềm, không phải bằng chứng hiệu quả phát hiện bất thường.
+Demo xuất tín hiệu XYZ mới và chẩn đoán biên độ, không cần GPU. Bảng chỉ số hiển thị là kết quả thí nghiệm đã lưu.
 
-## Giới hạn và nghiệm thu
+## Áp dụng cho dữ liệu khác
 
-Một hệ thử, một tốc độ danh nghĩa 1.200 rpm; không có session ID/timestamp từng mẫu. Kiểm tra gần trùng không chứng minh độc lập phiên đo hoàn toàn. Không tuyên bố dữ liệu đo tại DENSO, tổng quát đa tốc độ hoặc dự báo thời điểm hỏng.
+Có thể giữ quy trình so sánh và dùng cVAE sinh dữ liệu theo nhãn. Khi đổi bộ dữ liệu, cần điều chỉnh cách đọc, số kênh, số lớp, tần số lấy mẫu và độ dài cửa sổ, sau đó huấn luyện và đánh giá lại. Mã hiện tại dành cho Epson (3 kênh, 3.000 điểm, 6 lớp); chưa hỗ trợ thay mọi bộ dữ liệu tự động.
 
-Người nhận phải tự chạy kiểm tra trên máy mình và ghi commit, môi trường, kết quả cùng giới hạn còn mở vào biên bản nhận bàn giao. Kiểm tra của Người 1/AI không thay thế xác nhận đó. Khi thay split/scaler/window/quy trình, tạo phiên bản dữ liệu mới; khi chỉ sửa code/tài liệu, cập nhật manifest phát hành code tương ứng.
+## Nguồn và bản quyền
+
+Dữ liệu thật: [Epson Rotor Kit Vibration Dataset](https://www.epsondevice.com/sensing/en/dataset/index.html). Phương pháp tham khảo [Kingma và Welling](https://arxiv.org/abs/1312.6114), [Sohn và cộng sự](https://proceedings.neurips.cc/paper/2015/hash/8d55a249e6baa5c06772297520da2051-Abstract.html). Bài toán do BTC DENSO cung cấp.
+
+Copyright © 2026 Nguyen Tung Duong. All rights reserved. Xem [LICENSE](LICENSE). Dữ liệu và tài liệu bên thứ ba thuộc quyền của chủ sở hữu tương ứng.

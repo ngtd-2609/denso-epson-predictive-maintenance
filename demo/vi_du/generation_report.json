@@ -1,0 +1,16 @@
+{
+  "class_id": 1,
+  "samples": 5,
+  "seed": 2026,
+  "device": "cpu",
+  "generator_sha256": "a84c97dce0e8e40122fe5317b22c14359c0c3722dd89a9e4be03114f886847a6",
+  "source": "N(0,I) prior; synthetic research data",
+  "rms_ratio_to_train_xyz": [
+    0.20719167280705386,
+    0.17444073439201016,
+    0.2494796556052414
+  ],
+  "rms_warning": true,
+  "warning_rule": "Outside [0.5,2] in any channel; diagnostic only, no automatic filtering",
+  "scope": "Generation only. No retraining, no fresh test evaluation, no physical certification."
+}

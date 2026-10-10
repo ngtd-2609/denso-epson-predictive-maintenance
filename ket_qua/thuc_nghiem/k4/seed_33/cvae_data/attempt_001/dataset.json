@@ -1,0 +1,54 @@
+{
+  "method": "cvae",
+  "added_class_counts": [
+    0,
+    376,
+    376,
+    376,
+    376,
+    376
+  ],
+  "real_train_recording_ids": [
+    "trimMA342_1200rpm_AW__D_03",
+    "trimMA342_1200rpm_AW__D_04",
+    "trimMA342_1200rpm_AW__D_07",
+    "trimMA342_1200rpm_AW__D_14",
+    "trimMA342_1200rpm_A__DW_00",
+    "trimMA342_1200rpm_A__DW_05",
+    "trimMA342_1200rpm_A__DW_09",
+    "trimMA342_1200rpm_A__DW_11",
+    "trimMA342_1200rpm_A__D_00",
+    "trimMA342_1200rpm_A__D_03",
+    "trimMA342_1200rpm_A__D_06",
+    "trimMA342_1200rpm_A__D_07",
+    "trimMA342_1200rpm_A__D_09",
+    "trimMA342_1200rpm_A__D_10",
+    "trimMA342_1200rpm_A__D_11",
+    "trimMA342_1200rpm_A__D_15",
+    "trimMA342_1200rpm_A__Dvv_04",
+    "trimMA342_1200rpm_A__Dvv_05",
+    "trimMA342_1200rpm_A__Dvv_09",
+    "trimMA342_1200rpm_A__Dvv_15",
+    "trimMA342_1200rpm_Avv__D_03",
+    "trimMA342_1200rpm_Avv__D_05",
+    "trimMA342_1200rpm_Avv__D_10",
+    "trimMA342_1200rpm_Avv__D_11",
+    "trimMA342_1200rpm_Avv__Dvv_04",
+    "trimMA342_1200rpm_Avv__Dvv_05",
+    "trimMA342_1200rpm_Avv__Dvv_12",
+    "trimMA342_1200rpm_Avv__Dvv_15"
+  ],
+  "synthetic_ids_are_not_independent_recordings": true,
+  "unit": "dimensionless z-score",
+  "inverse_transform": "X_raw = X * scale + mean",
+  "mean": [
+    -2.1366185664433393e-09,
+    7.223633276146489e-09,
+    -4.063886853294348e-09
+  ],
+  "scale": [
+    0.0009258399898000209,
+    0.000873400726622438,
+    0.0009858191985464546
+  ]
+}

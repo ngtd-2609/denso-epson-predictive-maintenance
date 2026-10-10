@@ -1,0 +1,50 @@
+{
+  "config": {
+    "purpose": "main_frozen_comparison",
+    "profiles": [
+      "k1",
+      "k4"
+    ],
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "methods": [
+      "real",
+      "oversample",
+      "simple",
+      "cvae"
+    ],
+    "detector_steps": 800,
+    "generator_steps": 1600,
+    "eval_every": 50,
+    "batch_size": 32,
+    "latent_dim": 32,
+    "detector_lr": 0.001,
+    "generator_lr": 0.001,
+    "beta": 0.001,
+    "max_validation_fpr": 0.05
+  },
+  "source_sha256": {
+    "__init__.py": "6d36c0283ff1e5d69265be12dd86108cf735e6b42e19552e24ffdbed896bc6b6",
+    "__main__.py": "be264526238719bef613d37a5812423710f59bea67e95ec5ecfb795dc874585e",
+    "core.py": "862a79b70795e0a49fcec726f7a5fbb5b3350371f5cfebfccfcff8efde6a4042",
+    "models.py": "6ff9b4f652ec2a85ff5b919bb84bc25365b03bc4913b85b2dc567b80d7239929",
+    "pipeline.py": "8c6910bfd21cf136497d0aff0f83d9f5fd5f0b913dd925cd779d645367cba27a",
+    "quality.py": "ab6cd99bdef504e4a86badbae158b3fe401c8cca58600bceeffa39a14a7c5315",
+    "reporting.py": "e5a75583c42e80cfdb2abdf12d248dff476f402bd8627b6da9cd38f9e6de8d8a",
+    "training.py": "ff7426e292c4fefe03645820b3b84d97070a662a072844fe300f1787ff7ec98d"
+  },
+  "data_contract_sha256": "6645d70e6f4b3cddc76abffd700eba545478ed5ee81fa62342e4e7e46eebdc83",
+  "prepared_manifest_sha256": "580fb328f28f2424af052932c8d225b88f767ab9e506d2c534685093c8c16011",
+  "detector": "Conv1d(3,16,32,64;k11,s5), ReLU, global mean, Linear(64,6)",
+  "generator": "conditional waveform VAE, signed linear output, N(0,I) prior",
+  "threshold": "smallest validation-normal threshold at empirical FPR <= configured limit; predict >=",
+  "recording_aggregation": "mean binary fault probability; separate validation recording threshold",
+  "checkpoint_selection": "minimum validation CE for detector; minimum validation MSE+beta*KL for cVAE",
+  "balancing": "B/C/D add fault windows to match 752 normal windows/class; A real only",
+  "simple_augmentation": "joint XYZ amplitude U(0.9,1.1), joint circular shift integer U(-150,150)",
+  "test_access": "only evaluate command after explicit freeze command",
+  "created_local": "2026-10-08T12:33:04+0700"
+}

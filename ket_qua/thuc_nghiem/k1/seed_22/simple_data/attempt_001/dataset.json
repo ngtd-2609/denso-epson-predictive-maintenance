@@ -1,0 +1,39 @@
+{
+  "method": "simple",
+  "added_class_counts": [
+    0,
+    658,
+    658,
+    658,
+    658,
+    658
+  ],
+  "real_train_recording_ids": [
+    "trimMA342_1200rpm_AW__D_14",
+    "trimMA342_1200rpm_A__DW_00",
+    "trimMA342_1200rpm_A__D_00",
+    "trimMA342_1200rpm_A__D_03",
+    "trimMA342_1200rpm_A__D_06",
+    "trimMA342_1200rpm_A__D_07",
+    "trimMA342_1200rpm_A__D_09",
+    "trimMA342_1200rpm_A__D_10",
+    "trimMA342_1200rpm_A__D_11",
+    "trimMA342_1200rpm_A__D_15",
+    "trimMA342_1200rpm_A__Dvv_05",
+    "trimMA342_1200rpm_Avv__D_05",
+    "trimMA342_1200rpm_Avv__Dvv_04"
+  ],
+  "synthetic_ids_are_not_independent_recordings": true,
+  "unit": "dimensionless z-score",
+  "inverse_transform": "X_raw = X * scale + mean",
+  "mean": [
+    1.5738590125432678e-09,
+    1.0776081529205178e-08,
+    -1.962844935003178e-08
+  ],
+  "scale": [
+    0.0009124581214454457,
+    0.0008686396593289901,
+    0.0009739928853965645
+  ]
+}

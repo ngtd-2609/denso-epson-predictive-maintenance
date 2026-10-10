@@ -1,0 +1,7 @@
+{
+  "purpose": "main_frozen_comparison",
+  "profiles": ["k1", "k4"], "seeds": [11, 22, 33], "methods": ["real", "oversample", "simple", "cvae"],
+  "detector_steps": 800, "generator_steps": 1600, "eval_every": 50,
+  "batch_size": 32, "latent_dim": 32, "detector_lr": 0.001, "generator_lr": 0.001,
+  "beta": 0.001, "max_validation_fpr": 0.05
+}

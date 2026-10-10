@@ -1,0 +1,14 @@
+{
+  "profile": "k1",
+  "model_seed": 11,
+  "sample_seed": 2026,
+  "class_id": 1,
+  "source": "N(0,I) prior; not a real measurement",
+  "rms_mm_s": [
+    [
+      0.0001621263103585286,
+      0.00011837903653288257,
+      0.00021696847813556833
+    ]
+  ]
+}

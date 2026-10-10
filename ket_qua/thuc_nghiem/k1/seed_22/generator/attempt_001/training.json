@@ -1,0 +1,13 @@
+{
+  "seed": 10022,
+  "updates": 1600,
+  "selected_step": 600,
+  "selection": "minimum validation MSE + beta * mean KL",
+  "fault_training_windows": 470,
+  "wall_seconds": 30.287530600093305,
+  "device": "cuda",
+  "torch_version": "2.7.1+cu128",
+  "gpu": "NVIDIA GeForce RTX 3050 4GB Laptop GPU",
+  "peak_allocated_mib": 83.71826171875,
+  "peak_reserved_mib": 94.0
+}

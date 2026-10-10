@@ -1,0 +1,10 @@
+{
+  "files": {
+    "curve.json": "2a9cf20475f6f6e75fc04e530151b710eb659f8e74f8c66de0067df66f449f5e",
+    "detector.pt": "a9db7137d6d76b71d838da5558d81f13a8f3520b630b7491f23d1445fcff1336",
+    "thresholds.json": "687f0b0a42a7eb04bed477b2488f96894d172b0c19fde1d0c32d7df973c936ca",
+    "training.json": "3718c14078082d2a081e331005d0bd32d26efaca35d9a2523f5cee402a960477",
+    "validation_metrics.json": "6f89194f91861549ee150f495ac0ffca7ca3f401cc9802b9e898f2f9eaec1b1e",
+    "validation_predictions.npz": "ba83468acb4620c6a814af80cf552eae079289d1ddbdc80feeae706cd92425db"
+  }
+}

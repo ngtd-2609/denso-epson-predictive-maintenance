@@ -1,0 +1,421 @@
+{
+  "scope": "allowed training only; raw mm/s; descriptive, no rejection/filtering",
+  "classes": {
+    "1": {
+      "real_n": 376,
+      "synthetic_n": 376,
+      "rms_real": [
+        0.0009480697088221515,
+        0.0008792117811506645,
+        0.0009991634378747585
+      ],
+      "rms_synthetic": [
+        0.00018317742237457135,
+        0.00020191743207416643,
+        0.00023690278102647647
+      ],
+      "rms_ratio": [
+        0.19321092180251653,
+        0.22965733217303785,
+        0.2371011308523995
+      ],
+      "channel_correlation_real": [
+        -0.4670223301885906,
+        -0.2733468404987311,
+        -0.2361352426880857
+      ],
+      "channel_correlation_synthetic": [
+        -0.4804284778289141,
+        -0.15724203973359735,
+        -0.25210651903907383
+      ],
+      "normalized_psd_l1": [
+        0.19632464260395543,
+        0.32547475157919614,
+        0.06975579495944693
+      ],
+      "feature_spread_ratio": 9.67405849073251,
+      "nearest_training_feature_distance_median": 179.32462260664312,
+      "exact_training_duplicates": 0,
+      "raw_max_abs_real": [
+        0.0029854775378019864,
+        0.003340959536063946,
+        0.0024764537583833535
+      ],
+      "raw_max_abs_synthetic": [
+        0.0008806198095978853,
+        0.0014124309124410484,
+        0.0009837586730684334
+      ],
+      "fraction_beyond_training_channel_extrema": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relative_waveform_distance_median": 0.9040182828903198,
+      "near_training_windows_relative_l2_lt_005": 0,
+      "nearest_waveform_examples": [
+        {
+          "synthetic_class_index": 361,
+          "real_class_index": 159,
+          "relative_l2": 0.6173854470252991
+        },
+        {
+          "synthetic_class_index": 68,
+          "real_class_index": 160,
+          "relative_l2": 0.7018309831619263
+        },
+        {
+          "synthetic_class_index": 197,
+          "real_class_index": 373,
+          "relative_l2": 0.7120116949081421
+        },
+        {
+          "synthetic_class_index": 175,
+          "real_class_index": 374,
+          "relative_l2": 0.7143098711967468
+        },
+        {
+          "synthetic_class_index": 73,
+          "real_class_index": 271,
+          "relative_l2": 0.7369279861450195
+        }
+      ],
+      "unique_synthetic_windows": 376,
+      "rms_warning": true
+    },
+    "2": {
+      "real_n": 376,
+      "synthetic_n": 376,
+      "rms_real": [
+        0.0009815601112307247,
+        0.0008699470633810122,
+        0.0010536523335208936
+      ],
+      "rms_synthetic": [
+        0.00017613714411210496,
+        0.0001984767297113151,
+        0.0002335443110682758
+      ],
+      "rms_ratio": [
+        0.17944611042848532,
+        0.22814805413555136,
+        0.2216521556857964
+      ],
+      "channel_correlation_real": [
+        -0.44278860833793965,
+        -0.2907709296601007,
+        -0.28741944466025665
+      ],
+      "channel_correlation_synthetic": [
+        -0.4373439607701915,
+        -0.1430464723184801,
+        -0.24801611528669118
+      ],
+      "normalized_psd_l1": [
+        0.15343517102717869,
+        0.3614472706763651,
+        0.04030966036315057
+      ],
+      "feature_spread_ratio": 9.631472400700554,
+      "nearest_training_feature_distance_median": 218.4968617625089,
+      "exact_training_duplicates": 0,
+      "raw_max_abs_real": [
+        0.007548570592350642,
+        0.003157854083547361,
+        0.0038144589565051305
+      ],
+      "raw_max_abs_synthetic": [
+        0.0008642531517830212,
+        0.001358030986726311,
+        0.0009565671716703851
+      ],
+      "fraction_beyond_training_channel_extrema": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relative_waveform_distance_median": 0.8877410888671875,
+      "near_training_windows_relative_l2_lt_005": 0,
+      "nearest_waveform_examples": [
+        {
+          "synthetic_class_index": 191,
+          "real_class_index": 361,
+          "relative_l2": 0.7027627825737
+        },
+        {
+          "synthetic_class_index": 8,
+          "real_class_index": 291,
+          "relative_l2": 0.7085185050964355
+        },
+        {
+          "synthetic_class_index": 140,
+          "real_class_index": 176,
+          "relative_l2": 0.7090936899185181
+        },
+        {
+          "synthetic_class_index": 113,
+          "real_class_index": 183,
+          "relative_l2": 0.7096646428108215
+        },
+        {
+          "synthetic_class_index": 77,
+          "real_class_index": 118,
+          "relative_l2": 0.7301028966903687
+        }
+      ],
+      "unique_synthetic_windows": 376,
+      "rms_warning": true
+    },
+    "3": {
+      "real_n": 376,
+      "synthetic_n": 376,
+      "rms_real": [
+        0.0009086469233446703,
+        0.0008788130061102354,
+        0.000954519016013541
+      ],
+      "rms_synthetic": [
+        0.00018257494548337645,
+        0.0002030335687631567,
+        0.00023855900592065682
+      ],
+      "rms_ratio": [
+        0.20093057137235434,
+        0.2310315930140989,
+        0.2499258809080369
+      ],
+      "channel_correlation_real": [
+        -0.42741869035929037,
+        -0.24245126533117867,
+        -0.2742647455356887
+      ],
+      "channel_correlation_synthetic": [
+        -0.4566913401827163,
+        -0.14601499298594345,
+        -0.25092366126586974
+      ],
+      "normalized_psd_l1": [
+        0.22791383901663118,
+        0.34332136008914965,
+        0.08955196442552307
+      ],
+      "feature_spread_ratio": 9.565009823538325,
+      "nearest_training_feature_distance_median": 171.13842351045025,
+      "exact_training_duplicates": 0,
+      "raw_max_abs_real": [
+        0.0029714107435291365,
+        0.0033471584035406647,
+        0.0024251937003454548
+      ],
+      "raw_max_abs_synthetic": [
+        0.0008850034658568595,
+        0.0014598767526046886,
+        0.00088604636887653
+      ],
+      "fraction_beyond_training_channel_extrema": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relative_waveform_distance_median": 0.8863770365715027,
+      "near_training_windows_relative_l2_lt_005": 0,
+      "nearest_waveform_examples": [
+        {
+          "synthetic_class_index": 176,
+          "real_class_index": 177,
+          "relative_l2": 0.7229804992675781
+        },
+        {
+          "synthetic_class_index": 240,
+          "real_class_index": 317,
+          "relative_l2": 0.7238316535949707
+        },
+        {
+          "synthetic_class_index": 223,
+          "real_class_index": 320,
+          "relative_l2": 0.7282354831695557
+        },
+        {
+          "synthetic_class_index": 305,
+          "real_class_index": 188,
+          "relative_l2": 0.7318553328514099
+        },
+        {
+          "synthetic_class_index": 301,
+          "real_class_index": 295,
+          "relative_l2": 0.7335100769996643
+        }
+      ],
+      "unique_synthetic_windows": 376,
+      "rms_warning": true
+    },
+    "4": {
+      "real_n": 376,
+      "synthetic_n": 376,
+      "rms_real": [
+        0.0009156512479025699,
+        0.0008755898369174313,
+        0.0009763387760582467
+      ],
+      "rms_synthetic": [
+        0.0001775883377291674,
+        0.00019601408280004733,
+        0.00023715354248325464
+      ],
+      "rms_ratio": [
+        0.1939475735286321,
+        0.2238651872549448,
+        0.24290087446973063
+      ],
+      "channel_correlation_real": [
+        -0.42667643542467953,
+        -0.23882958657648007,
+        -0.307014102510503
+      ],
+      "channel_correlation_synthetic": [
+        -0.40429616293173926,
+        -0.1107701650477078,
+        -0.24140955929639557
+      ],
+      "normalized_psd_l1": [
+        0.15673289416700123,
+        0.3448340407631038,
+        0.07801189431612861
+      ],
+      "feature_spread_ratio": 9.48421567327503,
+      "nearest_training_feature_distance_median": 184.608650083603,
+      "exact_training_duplicates": 0,
+      "raw_max_abs_real": [
+        0.0029087065961695916,
+        0.003200054226701541,
+        0.002412795936357692
+      ],
+      "raw_max_abs_synthetic": [
+        0.0008857325857113348,
+        0.001288121304703902,
+        0.0008727886610237825
+      ],
+      "fraction_beyond_training_channel_extrema": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relative_waveform_distance_median": 0.8863698840141296,
+      "near_training_windows_relative_l2_lt_005": 0,
+      "nearest_waveform_examples": [
+        {
+          "synthetic_class_index": 322,
+          "real_class_index": 273,
+          "relative_l2": 0.6841108798980713
+        },
+        {
+          "synthetic_class_index": 170,
+          "real_class_index": 86,
+          "relative_l2": 0.6867029666900635
+        },
+        {
+          "synthetic_class_index": 139,
+          "real_class_index": 282,
+          "relative_l2": 0.6887658834457397
+        },
+        {
+          "synthetic_class_index": 274,
+          "real_class_index": 87,
+          "relative_l2": 0.7149254679679871
+        },
+        {
+          "synthetic_class_index": 254,
+          "real_class_index": 3,
+          "relative_l2": 0.7180145978927612
+        }
+      ],
+      "unique_synthetic_windows": 376,
+      "rms_warning": true
+    },
+    "5": {
+      "real_n": 376,
+      "synthetic_n": 376,
+      "rms_real": [
+        0.0009267295778671651,
+        0.000884511157932044,
+        0.0009949949023469289
+      ],
+      "rms_synthetic": [
+        0.00017363880071381315,
+        0.00019375593961738663,
+        0.0002320512103829715
+      ],
+      "rms_ratio": [
+        0.18736728044597067,
+        0.21905426277536305,
+        0.2332184917084744
+      ],
+      "channel_correlation_real": [
+        -0.4179945691400485,
+        -0.2511394709908183,
+        -0.2924295338013032
+      ],
+      "channel_correlation_synthetic": [
+        -0.46589508673801316,
+        -0.1481231095902536,
+        -0.2602114051425516
+      ],
+      "normalized_psd_l1": [
+        0.20082764800316194,
+        0.3128105985428664,
+        0.07076005431573627
+      ],
+      "feature_spread_ratio": 8.67804356111435,
+      "nearest_training_feature_distance_median": 163.6572582431824,
+      "exact_training_duplicates": 0,
+      "raw_max_abs_real": [
+        0.0030412673051260124,
+        0.0032601355560168315,
+        0.0027749537781787243
+      ],
+      "raw_max_abs_synthetic": [
+        0.0009118866390073428,
+        0.0014051630958591848,
+        0.0008749897295060832
+      ],
+      "fraction_beyond_training_channel_extrema": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relative_waveform_distance_median": 0.8840990662574768,
+      "near_training_windows_relative_l2_lt_005": 0,
+      "nearest_waveform_examples": [
+        {
+          "synthetic_class_index": 274,
+          "real_class_index": 68,
+          "relative_l2": 0.6840990781784058
+        },
+        {
+          "synthetic_class_index": 255,
+          "real_class_index": 9,
+          "relative_l2": 0.7096890807151794
+        },
+        {
+          "synthetic_class_index": 11,
+          "real_class_index": 238,
+          "relative_l2": 0.7107007503509521
+        },
+        {
+          "synthetic_class_index": 7,
+          "real_class_index": 366,
+          "relative_l2": 0.7205130457878113
+        },
+        {
+          "synthetic_class_index": 28,
+          "real_class_index": 366,
+          "relative_l2": 0.7246735095977783
+        }
+      ],
+      "unique_synthetic_windows": 376,
+      "rms_warning": true
+    }
+  },
+  "interpretation": "RMS warning uses descriptive 0.5–2 range, not a physical acceptance criterion. Relative waveform L2 uses synchronized unshifted z-score windows; shifted copies may escape detection. Training extrema are a diagnostic reference, not sensor clipping limits. Good reconstruction does not guarantee good prior-generated signals."
+}

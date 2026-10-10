@@ -1,0 +1,20 @@
+{
+  "seed": 22,
+  "updates": 800,
+  "selected_step": 800,
+  "selection": "minimum validation six-class cross entropy",
+  "train_class_counts": [
+    752,
+    376,
+    376,
+    376,
+    376,
+    376
+  ],
+  "wall_seconds": 6.610081499908119,
+  "device": "cuda",
+  "torch_version": "2.7.1+cu128",
+  "gpu": "NVIDIA GeForce RTX 3050 4GB Laptop GPU",
+  "peak_allocated_mib": 71.33837890625,
+  "peak_reserved_mib": 94.0
+}

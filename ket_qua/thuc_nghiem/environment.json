@@ -1,0 +1,14 @@
+{
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "executable": "D:\\DENSO_FACTORY\\.venv-train\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch": "2.7.1+cu128",
+  "numpy": "2.3.5",
+  "scipy": "1.17.1",
+  "sklearn": "1.8.0",
+  "cuda_runtime": "12.8",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3050 4GB Laptop GPU",
+  "cudnn_deterministic": true,
+  "bitwise_reproducibility_across_hardware_guaranteed": false
+}
